@@ -4,7 +4,7 @@ This English project builds a Scratch dishwasher simulator from the starter proj
 
 ## Project files
 
-- `code/dishwasher-sim-starter/` contains the starter `.sb3` with sprites, costumes, sounds, variables, and list items, but no scripts.
+- `code/dishwasher-sim-starter/` contains the starter `.sb3` with sprites, costumes, and sounds, but no variables, lists, or scripts.
 - `code/dishwasher-sim-complete/` contains the completed `.sb3` used as the reference project.
 - `solutions/` contains the completed `.sb3` for download.
 - `images/` contains learner-facing screenshots and asset examples used in the steps.

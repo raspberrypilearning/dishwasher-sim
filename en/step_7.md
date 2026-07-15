@@ -30,6 +30,23 @@ Copy the spoon scripts to the other dish sprites, then edit the message and cost
 
 > [!TASK]
 >
+> Click the `Stage`. From the `Variables`{:class="block3variables"} blocks menu, choose **Make a List**. Make a list called `stuff`{:class="block3variables"} for all sprites.
+>
+> Add these eight items to the list, one item on each line:
+>
+> 1. `bowl`
+> 2. `fork`
+> 3. `knife`
+> 4. `mug`
+> 5. `plate`
+> 6. `sideplate`
+> 7. `spoon`
+> 8. `teacup`
+>
+> Untick the list so it does not appear on the Stage.
+
+> [!TASK]
+>
 > Click the `Stage`. Update the green flag script so the game chooses a random item from the `stuff`{:class="block3variables"} list.
 >
 > ```blocks3

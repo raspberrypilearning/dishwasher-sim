@@ -4,7 +4,15 @@ Set up the game state, place the rack, and show the first utensil.
 
 > [!TASK]
 >
-> Open the `Dishwasher simulator starter` project. It already has the sprites, sounds, variables, and the `stuff`{:class="block3variables"} list.
+> Open the `Dishwasher simulator starter` project. It already has the sprites, costumes, and sounds you need.
+
+> [!TASK]
+>
+> Click the `Stage`, then open the `Variables`{:class="block3variables"} blocks menu. Make these variables **for all sprites**:
+>
+> - `clean plates`{:class="block3variables"} stores the player's score. Leave this variable ticked so it appears on the Stage.
+> - `clean`{:class="block3variables"} remembers whether the current dish is clean. Untick this variable.
+> - `soap`{:class="block3variables"} remembers whether the player has picked up soap. Untick this variable.
 
 > [!TASK]
 >
@@ -30,4 +38,3 @@ Set up the game state, place the rack, and show the first utensil.
 > ```
 
 Click the green flag. Nothing appears yet, but the score resets and the rack moves into place.
-
