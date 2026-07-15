@@ -1,0 +1,4 @@
+name: "Dishwasher simulator starter"
+identifier: "dishwasher-sim-starter"
+type: 'scratch'
+build: true
