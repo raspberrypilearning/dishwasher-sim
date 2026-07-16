@@ -9,9 +9,9 @@ Make the soap clickable and make the cloth follow the pointer.
 > <p align="center"><img src="images/soap.png" alt="The soap sprite." width="150" height="120" style="object-fit: contain;"></p>
 >
 > ```blocks3
-> when this sprite clicked
-> start sound (Bubbles v)
-> set [soap v] to [true]
+> +when this sprite clicked
+> +start sound (Bubbles v)
+> +set [soap v] to [true]
 > ```
 
 > [!TASK]
@@ -19,16 +19,16 @@ Make the soap clickable and make the cloth follow the pointer.
 > Add another script to the `soap` sprite to make it sit behind the dishes and pulse gently.
 >
 > ```blocks3
-> when green flag clicked
-> set size to (25) %
-> set drag mode [not draggable v]
-> go to [back v] layer
-> forever
-> repeat (15)
-> change size by (0.2)
+> +when green flag clicked
+> +set size to (25) %
+> +set drag mode [not draggable v]
+> +go to [back v] layer
+> +forever
+> +repeat (15)
+> +change size by (0.2)
 > end
-> repeat (15)
-> change size by (-0.2)
+> +repeat (15)
+> +change size by (-0.2)
 > end
 > end
 > ```
@@ -40,17 +40,17 @@ Make the soap clickable and make the cloth follow the pointer.
 > ![The dry cloth, soapy cloth, and hand costumes.](images/cloth-states.png)
 >
 > ```blocks3
-> when green flag clicked
-> forever
-> go to (mouse-pointer v)
-> go to [front v] layer
-> if <(clean) = [true]> then
-> switch costume to (hand v)
+> +when green flag clicked
+> +forever
+> +go to (mouse-pointer v)
+> +go to [front v] layer
+> +if <(clean) = [true]> then
+> +switch costume to (hand v)
 > else
-> if <(soap) = [true]> then
-> switch costume to (cloth2 v)
+> +if <(soap) = [true]> then
+> +switch costume to (cloth2 v)
 > else
-> switch costume to (cloth1 v)
+> +switch costume to (cloth1 v)
 > end
 > end
 > end

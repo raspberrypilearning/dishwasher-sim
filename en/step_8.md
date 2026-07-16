@@ -44,18 +44,18 @@ Add background music and a button that skips to the next song.
 > set volume to (music volume) %
 > broadcast (item (pick random (1) to (8)) of [stuff v])
 > +forever
-> if <(song) = (1)> then
-> play sound (song1 v) until done
+> +if <(song) = (1)> then
+> +play sound (song1 v) until done
 > else
-> if <(song) = (2)> then
-> play sound (song2 v) until done
+> +if <(song) = (2)> then
+> +play sound (song2 v) until done
 > else
-> play sound (song3 v) until done
+> +play sound (song3 v) until done
 > end
 > end
-> change [song v] by (1)
-> if <(song) > (3)> then
-> set [song v] to (1)
+> +change [song v] by (1)
+> +if <(song) > (3)> then
+> +set [song v] to (1)
 > end
 > end
 > ```
@@ -67,13 +67,13 @@ Add background music and a button that skips to the next song.
 > <p align="center"><img src="images/skip-button.png" alt="The skip button sprite." width="150" height="120" style="object-fit: contain;"></p>
 >
 > ```blocks3
-> when this sprite clicked
-> broadcast (skip v)
+> +when this sprite clicked
+> +broadcast (skip v)
 > ```
 >
 > ```blocks3
-> when green flag clicked
-> set drag mode [not draggable v]
+> +when green flag clicked
+> +set drag mode [not draggable v]
 > ```
 
 > [!TASK]
@@ -81,26 +81,26 @@ Add background music and a button that skips to the next song.
 > Click the `Stage`. Add a `when I receive ()`{:class="block3events"} script for the `skip` message to play the next song.
 >
 > ```blocks3
-> when I receive (skip v)
-> stop [other scripts in sprite v]
-> stop all sounds
-> change [song v] by (1)
-> if <(song) > (3)> then
-> set [song v] to (1)
+> +when I receive (skip v)
+> +stop [other scripts in sprite v]
+> +stop all sounds
+> +change [song v] by (1)
+> +if <(song) > (3)> then
+> +set [song v] to (1)
 > end
-> forever
-> if <(song) = (1)> then
-> play sound (song1 v) until done
+> +forever
+> +if <(song) = (1)> then
+> +play sound (song1 v) until done
 > else
-> if <(song) = (2)> then
-> play sound (song2 v) until done
+> +if <(song) = (2)> then
+> +play sound (song2 v) until done
 > else
-> play sound (song3 v) until done
+> +play sound (song3 v) until done
 > end
 > end
-> change [song v] by (1)
-> if <(song) > (3)> then
-> set [song v] to (1)
+> +change [song v] by (1)
+> +if <(song) > (3)> then
+> +set [song v] to (1)
 > end
 > end
 > ```

@@ -19,11 +19,11 @@ Set up the game state, place the rack, and show the first dish.
 > Click the `Stage`. Add this script to reset the game and show the `bowl` first.
 >
 > ```blocks3
-> when green flag clicked
-> set [clean plates v] to (0)
-> set [clean v] to [false]
-> set [soap v] to [false]
-> broadcast (bowl v)
+> +when green flag clicked
+> +set [clean plates v] to (0)
+> +set [clean v] to [false]
+> +set [soap v] to [false]
+> +broadcast (bowl v)
 > ```
 
 > [!TASK]
@@ -33,8 +33,8 @@ Set up the game state, place the rack, and show the first dish.
 > <p align="center"><img src="images/rack.png" alt="The rack sprite." width="180" height="120" style="object-fit: contain;"></p>
 >
 > ```blocks3
-> when green flag clicked
-> go to x: (140) y: (-38)
+> +when green flag clicked
+> +go to x: (140) y: (-38)
 > ```
 
 > [!TIP]
