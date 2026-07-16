@@ -13,6 +13,8 @@ Set up the game state, place the rack, and show the first dish.
 > - `clean plates`{:class="block3variables"} stores the player's score. Leave this variable ticked so it appears on the Stage.
 > - `clean`{:class="block3variables"} remembers whether the current dish is clean. Untick this variable.
 > - `soap`{:class="block3variables"} remembers whether the player has picked up soap. Untick this variable.
+>
+> <p align="center"><img src="images/clean-plates.png" alt="The clean plates variable ticked in the Variables menu." width="226" height="68" style="object-fit: contain;"></p>
 
 > [!TASK]
 >

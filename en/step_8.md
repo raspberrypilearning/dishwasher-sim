@@ -6,10 +6,10 @@ Add background music and a button that skips to the next song.
 >
 > Click the `Stage`, then make these variables **for all sprites** from the `Variables`{:class="block3variables"} blocks menu:
 >
-> - `song`{:class="block3variables"} stores which song is playing.
-> - `music volume`{:class="block3variables"} stores how loud the music should be.
+> - `song`{:class="block3variables"} stores which song is playing. Untick this variable.
+> - `music volume`{:class="block3variables"} stores how loud the music should be. Leave this variable ticked so it appears on the Stage.
 >
-> Untick both variables so they do not appear on the Stage.
+> <p align="center"><img src="images/music-volume.png" alt="The music volume variable ticked in the Variables menu." width="240" height="66" style="object-fit: contain;"></p>
 
 > [!TASK]
 >
