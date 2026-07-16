@@ -30,6 +30,8 @@ Set up the game state, place the rack, and show the first dish.
 >
 > Click the `rack` sprite. It will be the target for clean dishes. Use a `when green flag clicked`{:class="block3events"} block to put it in the right place.
 >
+> The `rack` sprite is just a collision box. It looks plain because the drying rack the player sees is already drawn on the backdrop.
+>
 > <p align="center"><img src="images/rack.png" alt="The rack sprite." width="180" height="120" style="object-fit: contain;"></p>
 >
 > ```blocks3
