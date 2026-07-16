@@ -1,6 +1,6 @@
 ## Start the dishwasher
 
-Set up the game state, place the rack, and show the first utensil.
+Set up the game state, place the rack, and show the first dish.
 
 > [!TASK]
 >
@@ -16,14 +16,14 @@ Set up the game state, place the rack, and show the first utensil.
 
 > [!TASK]
 >
-> Click the `Stage`. Add this script to reset the game and show the `spoon` first.
+> Click the `Stage`. Add this script to reset the game and show the `bowl` first.
 >
 > ```blocks3
 > when green flag clicked
 > set [clean plates v] to (0)
 > set [clean v] to [false]
 > set [soap v] to [false]
-> broadcast (spoon v)
+> broadcast (bowl v)
 > ```
 
 > [!TASK]

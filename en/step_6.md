@@ -1,6 +1,6 @@
 ## Put it in the rack
 
-Once the spoon is clean, let the player drag it into the rack and score a clean plate.
+Once the bowl is clean, let the player drag it into the rack and score a clean plate.
 
 > [!TASK]
 >
@@ -13,7 +13,7 @@ Once the spoon is clean, let the player drag it into the rack and score a clean 
 
 > [!TASK]
 >
-> Add this script to the `spoon_state_01_clean_sparkle` sprite. It uses `set drag mode ()`{:class="block3sensing"} to unlock the clean spoon, then `wait until ()`{:class="block3control"} and `touching ()?`{:class="block3sensing"} to wait for the rack before starting the next round.
+> Add this script to the `bowl_state_01_clean_sparkle` sprite. It uses `set drag mode ()`{:class="block3sensing"} to unlock the clean bowl, then `wait until ()`{:class="block3control"} and `touching ()?`{:class="block3sensing"} to wait for the rack before starting the next round.
 >
 > ```blocks3
 > when I receive (clean v)
@@ -29,11 +29,11 @@ Once the spoon is clean, let the player drag it into the rack and score a clean 
 > set size to (0) %
 > go to x: (0) y: (-140)
 > set [clean v] to [false]
-> broadcast (spoon v)
+> broadcast (bowl v)
 > ```
 
 > [!TASK]
 >
-> **Test:** Click the green flag, use the soap, scrub the spoon, then drag it into the rack.
+> **Test:** Click the green flag, use the soap, scrub the bowl, then drag it into the rack.
 
-The spoon disappears, the `clean plates`{:class="block3variables"} score goes up, and a new spoon appears.
+The bowl disappears, the `clean plates`{:class="block3variables"} score goes up, and a new bowl appears.

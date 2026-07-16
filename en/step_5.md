@@ -1,16 +1,16 @@
-## Scrub the utensil
+## Scrub the dish
 
-Make the player add soap, then scrub through the spoon's dirty-to-clean costumes.
-
-> [!TASK]
->
-> The spoon has six costumes, from filthy to sparkling clean.
->
-> ![The spoon costumes from filthy to clean.](images/spoon-cleaning-states.png)
+Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 
 > [!TASK]
 >
-> Add this script to the `spoon_state_01_clean_sparkle` sprite.
+> The bowl has six costumes, from filthy to sparkling clean.
+>
+> ![The bowl costumes from filthy to clean.](images/bowl-cleaning-states.png)
+
+> [!TASK]
+>
+> Add this script to the `bowl_state_01_clean_sparkle` sprite.
 >
 > ```blocks3
 > when this sprite clicked
@@ -32,6 +32,6 @@ Make the player add soap, then scrub through the spoon's dirty-to-clean costumes
 
 > [!TIP]
 >
-> The `repeat until`{:class="block3control"} loop stops when the spoon reaches costume `6`, the clean sparkling costume.
+> The `repeat until`{:class="block3control"} loop stops when the bowl reaches costume `6`, the clean sparkling costume.
 
-Click the green flag, then click the spoon before using the soap. It tells you what it needs. Click the soap, then click and hold on the spoon to scrub it clean.
+Click the green flag, then click the bowl before using the soap. It tells you what it needs. Click the soap, then click and hold on the bowl to scrub it clean.

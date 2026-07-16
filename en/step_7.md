@@ -1,35 +1,37 @@
 ## Copy the dish scripts
 
-Copy the spoon scripts to the other dish sprites, then edit the message and costume names.
+Copy the bowl scripts to the other dish sprites, then edit the message and costume names.
 
 > [!TIP]
 >
-> Game developers often build and test one working **prototype** first. Fixing the spoon before copying its scripts makes problems easier to find.
+> Game developers often build and test one working **prototype** first. Fixing the bowl before copying its scripts makes problems easier to find.
 
 > [!TASK]
 >
-> Copy the four spoon scripts to these sprites:
+> Drag each of the four bowl scripts onto these other dish sprites:
 >
-> - `bowl_state_01_clean_sparkle`
 > - `fork_state_01_clean_sparkle`
 > - `knife_state_01_clean_sparkle`
 > - `mug_state_01_clean_sparkle`
 > - `plate_state_01_clean_sparkle`
 > - `side_plate_state_01_clean_sparkle`
+> - `spoon_state_01_clean_sparkle`
 > - `tea_cup_state_01_clean_sparkle`
+>
+> ![Dragging the bowl scripts onto the other dish sprites.](images/copy-scripts.gif)
 
 > [!TASK]
 >
-> On each copied sprite, edit the `when I receive (spoon v)`{:class="block3events"} block and the first `switch costume to ()`{:class="block3looks"} block.
+> On each copied sprite, edit the `when I receive (bowl v)`{:class="block3events"} block and the first `switch costume to ()`{:class="block3looks"} block.
 >
 > | Sprite | Receive message | Dirty costume |
 > | --- | --- | --- |
-> | `bowl_state_01_clean_sparkle` | `bowl` | `bowl_state_06_filthy` |
 > | `fork_state_01_clean_sparkle` | `fork` | `fork_state_06_filthy` |
 > | `knife_state_01_clean_sparkle` | `knife` | `knife_state_06_filthy` |
 > | `mug_state_01_clean_sparkle` | `mug` | `mug_state_06_filthy` |
 > | `plate_state_01_clean_sparkle` | `plate` | `plate_state_06_filthy` |
 > | `side_plate_state_01_clean_sparkle` | `sideplate` | `side_plate_state_06_filthy` |
+> | `spoon_state_01_clean_sparkle` | `spoon` | `spoon_state_06_filthy` |
 > | `tea_cup_state_01_clean_sparkle` | `teacup` | `tea_cup_state_06_filthy` |
 
 > [!TASK]
@@ -63,7 +65,7 @@ Copy the spoon scripts to the other dish sprites, then edit the message and cost
 
 > [!TASK]
 >
-> Update the last `broadcast ()`{:class="block3events"} block in the clean script on the spoon and on each copied dish sprite, so the next item is random too.
+> Update the last `broadcast ()`{:class="block3events"} block in the clean script on the bowl and on each copied dish sprite, so the next item is random too.
 >
 > ```blocks3
 > when I receive (clean v)

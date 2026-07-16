@@ -11,8 +11,8 @@ steps:
     completion:
       - engaged
   - title: Add soap and a cloth
-  - title: Make one utensil appear
-  - title: Scrub the utensil
+  - title: Make one dish appear
+  - title: Scrub the dish
   - title: Put it in the rack
   - title: Copy the dish scripts
   - title: Add music controls

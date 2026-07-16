@@ -1,10 +1,10 @@
-## Make one utensil appear
+## Make one dish appear
 
-Code the `spoon` first. Later, you will copy its scripts to the other dish sprites.
+Code the `bowl` first. Later, you will copy its scripts to the other dish sprites.
 
 > [!TASK]
 >
-> Click the `spoon_state_01_clean_sparkle` sprite. Add a `when green flag clicked`{:class="block3events"} block with a `hide`{:class="block3looks"} block.
+> Click the `bowl_state_01_clean_sparkle` sprite. Add a `when green flag clicked`{:class="block3events"} block with a `hide`{:class="block3looks"} block.
 >
 > ```blocks3
 > when green flag clicked
@@ -13,11 +13,11 @@ Code the `spoon` first. Later, you will copy its scripts to the other dish sprit
 
 > [!TASK]
 >
-> Start another script with a `when I receive ()`{:class="block3events"} block and choose the `spoon` message.
+> Start another script with a `when I receive ()`{:class="block3events"} block and choose the `bowl` message.
 >
 > ```blocks3
-> when I receive (spoon v)
-> switch costume to (spoon_state_06_filthy v)
+> when I receive (bowl v)
+> switch costume to (bowl_state_06_filthy v)
 > set [clean v] to [false]
 > set size to (0) %
 > go to x: (0) y: (-120)
@@ -31,8 +31,8 @@ Code the `spoon` first. Later, you will copy its scripts to the other dish sprit
 > broadcast (clean v)
 > ```
 
-The spoon starts tiny and grows as it rises out of the sink.
+The bowl starts tiny and grows as it rises out of the sink.
 
 > [!TASK]
 >
-> Click the green flag. The dirty spoon appears in the middle of the sink.
+> Click the green flag. The dirty bowl appears in the middle of the sink.
