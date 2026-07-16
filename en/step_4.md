@@ -4,7 +4,7 @@ Code the `spoon` first. Later, you will copy its scripts to the other dish sprit
 
 > [!TASK]
 >
-> Click the `spoon_state_01_clean_sparkle` sprite. Hide it when the green flag is clicked.
+> Click the `spoon_state_01_clean_sparkle` sprite. Add a `when green flag clicked`{:class="block3events"} block with a `hide`{:class="block3looks"} block.
 >
 > ```blocks3
 > when green flag clicked
@@ -13,7 +13,7 @@ Code the `spoon` first. Later, you will copy its scripts to the other dish sprit
 
 > [!TASK]
 >
-> Make the spoon appear when it receives the `spoon` message.
+> Start another script with a `when I receive ()`{:class="block3events"} block and choose the `spoon` message.
 >
 > ```blocks3
 > when I receive (spoon v)

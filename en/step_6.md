@@ -4,7 +4,7 @@ Once the spoon is clean, let the player drag it into the rack and score a clean 
 
 > [!TASK]
 >
-> Add a message script to the `cloth1` sprite.
+> Add a `when I receive ()`{:class="block3events"} block to the `cloth1` sprite and choose the `clean` message.
 >
 > ```blocks3
 > when I receive (clean v)
@@ -13,7 +13,7 @@ Once the spoon is clean, let the player drag it into the rack and score a clean 
 
 > [!TASK]
 >
-> Add this script to the `spoon_state_01_clean_sparkle` sprite. It unlocks the clean spoon, waits until it touches the rack, then starts the next round.
+> Add this script to the `spoon_state_01_clean_sparkle` sprite. It uses `set drag mode ()`{:class="block3sensing"} to unlock the clean spoon, then `wait until ()`{:class="block3control"} and `touching ()?`{:class="block3sensing"} to wait for the rack before starting the next round.
 >
 > ```blocks3
 > when I receive (clean v)

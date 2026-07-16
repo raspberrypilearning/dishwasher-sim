@@ -19,4 +19,4 @@ You will start with a Scratch project that already has the sprites, costumes, an
 ### You will need:
 
 - The Scratch editor
-- The `Dishwasher simulator starter` project
+- The [Dishwasher simulator starter](https://scratch.mit.edu/projects/1362382639/editor){:target="_blank"} project

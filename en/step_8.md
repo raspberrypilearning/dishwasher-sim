@@ -13,7 +13,7 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
-> Click the `Stage`. Add music setup blocks near the start of the green flag script.
+> Click the `Stage`. Add the music setup blocks near the start of the `when green flag clicked`{:class="block3events"} script.
 >
 > ```blocks3
 > when green flag clicked
@@ -26,9 +26,13 @@ Add background music and a button that skips to the next song.
 > broadcast (item (pick random (1) to (8)) of [stuff v])
 > ```
 
+> [!TIP]
+>
+> Balancing the volume of music and sound effects is called **audio mixing**. Quieter music leaves room for the cleaning and scoring sounds.
+
 > [!TASK]
 >
-> Add the music loop to the bottom of the same script.
+> Add a `forever`{:class="block3control"} loop to the bottom of the same script.
 >
 > ```blocks3
 > when green flag clicked
@@ -58,7 +62,7 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
-> Click the `Sprite1` button sprite. Make it broadcast `skip` when the player clicks it, and make it not draggable.
+> Click the `Sprite1` button sprite. Add a `broadcast ()`{:class="block3events"} block and choose the `skip` message. Set its drag mode to `not draggable`{:class="block3sensing"}.
 >
 > <p align="center"><img src="images/skip-button.png" alt="The skip button sprite." width="150" height="120" style="object-fit: contain;"></p>
 >
@@ -74,7 +78,7 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
-> Click the `Stage` and add a script to play the next song when it receives `skip`.
+> Click the `Stage`. Add a `when I receive ()`{:class="block3events"} script for the `skip` message to play the next song.
 >
 > ```blocks3
 > when I receive (skip v)

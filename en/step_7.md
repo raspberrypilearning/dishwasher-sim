@@ -2,6 +2,10 @@
 
 Copy the spoon scripts to the other dish sprites, then edit the message and costume names.
 
+> [!TIP]
+>
+> Game developers often build and test one working **prototype** first. Fixing the spoon before copying its scripts makes problems easier to find.
+
 > [!TASK]
 >
 > Copy the four spoon scripts to these sprites:
@@ -47,7 +51,7 @@ Copy the spoon scripts to the other dish sprites, then edit the message and cost
 
 > [!TASK]
 >
-> Click the `Stage`. Update the green flag script so the game chooses a random item from the `stuff`{:class="block3variables"} list.
+> Click the `Stage`. Update the `when green flag clicked`{:class="block3events"} script so the game chooses a random item from the `stuff`{:class="block3variables"} list.
 >
 > ```blocks3
 > when green flag clicked
@@ -59,7 +63,7 @@ Copy the spoon scripts to the other dish sprites, then edit the message and cost
 
 > [!TASK]
 >
-> Update the last block in the clean script on the spoon and on each copied dish sprite, so the next item is random too.
+> Update the last `broadcast ()`{:class="block3events"} block in the clean script on the spoon and on each copied dish sprite, so the next item is random too.
 >
 > ```blocks3
 > when I receive (clean v)

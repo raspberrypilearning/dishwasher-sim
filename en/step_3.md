@@ -56,4 +56,8 @@ Make the soap clickable and make the cloth follow the pointer.
 > end
 > ```
 
+> [!TIP]
+>
+> **Visual feedback** shows the player that an action worked. Changing the cloth costume makes it clear when the player has picked up soap.
+
 Click the green flag and move the pointer. The cloth follows the pointer; when you click the soap, it changes to a soapy cloth.

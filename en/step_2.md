@@ -4,7 +4,7 @@ Set up the game state, place the rack, and show the first utensil.
 
 > [!TASK]
 >
-> Open the `Dishwasher simulator starter` project. It already has the sprites, costumes, and sounds you need.
+> Open the [Dishwasher simulator starter](https://scratch.mit.edu/projects/1362382639/editor){:target="_blank"}. It already has the sprites, costumes, and sounds you need.
 
 > [!TASK]
 >
@@ -28,7 +28,7 @@ Set up the game state, place the rack, and show the first utensil.
 
 > [!TASK]
 >
-> Click the `rack` sprite and put it in the right place when the green flag is clicked.
+> Click the `rack` sprite. It will be the target for clean dishes. Use a `when green flag clicked`{:class="block3events"} block to put it in the right place.
 >
 > <p align="center"><img src="images/rack.png" alt="The rack sprite." width="180" height="120" style="object-fit: contain;"></p>
 >
@@ -36,5 +36,9 @@ Set up the game state, place the rack, and show the first utensil.
 > when green flag clicked
 > go to x: (140) y: (-38)
 > ```
+
+> [!TIP]
+>
+> In games, two sprites **collide** when they are touching. Later, a `touching ()?`{:class="block3sensing"} block will detect when a clean dish collides with the rack.
 
 Click the green flag. Nothing appears yet, but the score resets and the rack moves into place.
