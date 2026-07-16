@@ -37,7 +37,7 @@ Make the soap clickable and make the cloth follow the pointer.
 >
 > Click the `cloth1` sprite. Make it follow the mouse pointer and change costume to show what the player is holding.
 >
-> ![The dry cloth, soapy cloth, and hand costumes.](images/cloth-states.png)
+> <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="600" height="257" style="object-fit: contain;"></p>
 >
 > ```blocks3
 > +when green flag clicked
