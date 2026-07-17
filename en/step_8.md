@@ -13,6 +13,10 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
+> On the Stage, double-click the `music volume`{:class="block3variables"} variable display until it changes into a slider. The player can drag the slider to change the music volume.
+
+> [!TASK]
+>
 > Click the `Stage`. Add the music setup blocks near the start of the `when green flag clicked`{:class="block3events"} script.
 >
 > ```blocks3
@@ -25,6 +29,17 @@ Add background music and a button that skips to the next song.
 > +set volume to (music volume) %
 > +broadcast (play music v)
 > broadcast (item (pick random (1) to (8)) of [stuff v])
+> ```
+
+> [!TASK]
+>
+> Add another script to the `Stage` so the sound volume follows the `music volume`{:class="block3variables"} slider while the game runs.
+>
+> ```blocks3
+> +when green flag clicked
+> +forever
+> +set volume to (music volume) %
+> end
 > ```
 
 > [!TIP]
@@ -90,7 +105,7 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
-> Click the `Sprite1` button sprite. Add a `broadcast ()`{:class="block3events"} block and choose the `skip` message. Set its drag mode to `not draggable`{:class="block3sensing"}.
+> Click the `skip` button sprite. Add a `broadcast ()`{:class="block3events"} block and choose the `skip` message. Set its drag mode to `not draggable`{:class="block3sensing"}.
 >
 > <p align="center"><img src="images/skip-button.png" alt="The skip button sprite." width="150" height="120" style="object-fit: contain;"></p>
 >
