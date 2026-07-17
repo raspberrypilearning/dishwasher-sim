@@ -16,13 +16,21 @@ Make the soap clickable and make the cloth follow the pointer.
 
 > [!TASK]
 >
-> Add another script to the `soap` sprite to make it sit behind the dishes and pulse gently.
+> Add another script to the `soap` sprite to make it sit behind the dishes.
 >
 > ```blocks3
 > +when green flag clicked
 > +set size to (25) %
 > +set drag mode [not draggable v]
 > +go to [back v] layer
+> ```
+
+> [!TASK]
+>
+> Add one more script to the `soap` sprite to make it pulse gently.
+>
+> ```blocks3
+> +when green flag clicked
 > +forever
 > +repeat (15)
 > +change size by (0.2)
@@ -35,7 +43,7 @@ Make the soap clickable and make the cloth follow the pointer.
 
 > [!TASK]
 >
-> Click the `cloth1` sprite. Make it follow the mouse pointer and change costume to show what the player is holding.
+> Click the `cloth1` sprite. Make it follow the mouse pointer.
 >
 > <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="600" height="257" style="object-fit: contain;"></p>
 >
@@ -44,13 +52,38 @@ Make the soap clickable and make the cloth follow the pointer.
 > +forever
 > +go to (mouse-pointer v)
 > +go to [front v] layer
+> end
+> ```
+
+> [!TASK]
+>
+> Add another script to the `cloth1` sprite. First, show the hand when the dish is clean, otherwise show the dry cloth.
+>
+> ```blocks3
+> +when green flag clicked
+> +forever
 > +if <(clean) = [true]> then
 > +switch costume to (hand v)
+> else
+> +switch costume to (cloth1 v)
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Inside the `else`{:class="block3control"}, add another `if () then else`{:class="block3control"} block to show the soapy cloth when the player has picked up soap.
+>
+> ```blocks3
+> when green flag clicked
+> forever
+> if <(clean) = [true]> then
+> switch costume to (hand v)
 > else
 > +if <(soap) = [true]> then
 > +switch costume to (cloth2 v)
 > else
-> +switch costume to (cloth1 v)
+> switch costume to (cloth1 v)
 > end
 > end
 > end

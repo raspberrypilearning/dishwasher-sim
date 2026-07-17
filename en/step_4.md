@@ -13,7 +13,7 @@ Code the `bowl` first. Later, you will copy its scripts to the other dish sprite
 
 > [!TASK]
 >
-> Start another script with a `when I receive ()`{:class="block3events"} block and choose the `bowl` message.
+> Start another script with a `when I receive ()`{:class="block3events"} block and choose the `bowl` message. Set up the dirty bowl so it appears in the sink.
 >
 > ```blocks3
 > +when I receive (bowl v)
@@ -22,11 +22,43 @@ Code the `bowl` first. Later, you will copy its scripts to the other dish sprite
 > +set size to (0) %
 > +go to x: (0) y: (-120)
 > +show
+> +set drag mode [not draggable v]
+> ```
+
+> [!TASK]
+>
+> Add a loop to the same script to make the bowl rise out of the sink.
+>
+> ```blocks3
+> when I receive (bowl v)
+> switch costume to (bowl_state_06_filthy v)
+> set [clean v] to [false]
+> set size to (0) %
+> go to x: (0) y: (-120)
+> show
+> set drag mode [not draggable v]
 > +repeat (20)
 > +change y by (6)
 > +change size by (6)
 > end
-> +set drag mode [not draggable v]
+> ```
+
+> [!TASK]
+>
+> Add blocks to the bottom of the same script to wait until the bowl is clean, then send the `clean` message.
+>
+> ```blocks3
+> when I receive (bowl v)
+> switch costume to (bowl_state_06_filthy v)
+> set [clean v] to [false]
+> set size to (0) %
+> go to x: (0) y: (-120)
+> show
+> set drag mode [not draggable v]
+> repeat (20)
+> change y by (6)
+> change size by (6)
+> end
 > +wait until <(clean) = [true]>
 > +broadcast (clean v)
 > ```

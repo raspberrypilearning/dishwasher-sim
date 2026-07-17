@@ -10,11 +10,23 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 
 > [!TASK]
 >
-> Add this script to the `bowl_state_01_clean_sparkle` sprite.
+> Add this script to the `bowl_state_01_clean_sparkle` sprite. It checks whether the bowl still needs cleaning before it reacts to a click.
 >
 > ```blocks3
 > +when this sprite clicked
 > +if <(clean) = [false]> then
+> +say [You need soap!] for (2) seconds
+> +start sound (Collect v)
+> end
+> ```
+
+> [!TASK]
+>
+> Inside the `if () then`{:class="block3control"} block, add an `if () then else`{:class="block3control"} block to scrub only when the player has picked up soap.
+>
+> ```blocks3
+> when this sprite clicked
+> if <(clean) = [false]> then
 > +if <(soap) = [true]> then
 > +repeat until <(costume [number v]) = (6)>
 > +wait until <mouse down?>
@@ -24,8 +36,8 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 > end
 > +set [clean v] to [true]
 > else
-> +say [You need soap!] for (2) seconds
-> +start sound (Collect v)
+> say [You need soap!] for (2) seconds
+> start sound (Collect v)
 > end
 > end
 > ```
