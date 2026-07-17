@@ -57,22 +57,47 @@ Make the soap clickable and make the cloth follow the pointer.
 
 > [!TASK]
 >
-> Add another script to the `cloth1` sprite. First, show the hand when the dish is clean, otherwise show the dry cloth.
+> Add another script to the `cloth1` sprite. Start by showing the dry cloth.
 >
 > ```blocks3
 > +when green flag clicked
 > +forever
-> +if <(clean) = [true]> then
-> +switch costume to (hand v)
-> else
 > +switch costume to (cloth1 v)
+> end
+> ```
+
+> [!TASK]
+>
+> Replace the `switch costume to (cloth1 v)`{:class="block3looks"} block with an `if () then else`{:class="block3control"} block. Keep the dry cloth in the `else`{:class="block3control"} branch.
+>
+> ```blocks3
+> when green flag clicked
+> forever
+> +if <(clean) = [true]> then
+> else
+> switch costume to (cloth1 v)
 > end
 > end
 > ```
 
 > [!TASK]
 >
-> Inside the `else`{:class="block3control"}, add another `if () then else`{:class="block3control"} block to show the soapy cloth when the player has picked up soap.
+> Add a `switch costume to ()`{:class="block3looks"} block inside the first branch to show the hand when the dish is clean.
+>
+> ```blocks3
+> when green flag clicked
+> forever
+> if <(clean) = [true]> then
+> +switch costume to (hand v)
+> else
+> switch costume to (cloth1 v)
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Inside the `else`{:class="block3control"}, add another `if () then else`{:class="block3control"} block to check whether the player has picked up soap. Keep the dry cloth in the new `else`{:class="block3control"} branch.
 >
 > ```blocks3
 > when green flag clicked
@@ -81,6 +106,24 @@ Make the soap clickable and make the cloth follow the pointer.
 > switch costume to (hand v)
 > else
 > +if <(soap) = [true]> then
+> else
+> switch costume to (cloth1 v)
+> end
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Add a `switch costume to ()`{:class="block3looks"} block inside the soap branch to show the soapy cloth.
+>
+> ```blocks3
+> when green flag clicked
+> forever
+> if <(clean) = [true]> then
+> switch costume to (hand v)
+> else
+> if <(soap) = [true]> then
 > +switch costume to (cloth2 v)
 > else
 > switch costume to (cloth1 v)

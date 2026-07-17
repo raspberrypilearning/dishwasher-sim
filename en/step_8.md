@@ -48,22 +48,47 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
-> Add a new script to the `Stage` with a `when I receive ()`{:class="block3events"} block and choose the `play music` message. Add the first `if () then else`{:class="block3control"} block to choose between `song1` and another song.
+> Add a new script to the `Stage` with a `when I receive ()`{:class="block3events"} block and choose the `play music` message. Start with `song2` as the default song.
 >
 > ```blocks3
 > +when I receive (play music v)
 > +forever
-> +if <(song) = (1)> then
-> +play sound (song1 v) until done
-> else
 > +play sound (song2 v) until done
+> end
+> ```
+
+> [!TASK]
+>
+> Replace the `play sound (song2 v) until done`{:class="block3sound"} block with an `if () then else`{:class="block3control"} block. Keep `song2` in the `else`{:class="block3control"} branch.
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> +if <(song) = (1)> then
+> else
+> play sound (song2 v) until done
 > end
 > end
 > ```
 
 > [!TASK]
 >
-> Inside the `else`{:class="block3control"}, add another `if () then else`{:class="block3control"} block so `song2` and `song3` can both play.
+> Add the `play sound () until done`{:class="block3sound"} block inside the first branch so `song1` can play.
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> if <(song) = (1)> then
+> +play sound (song1 v) until done
+> else
+> play sound (song2 v) until done
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Inside the `else`{:class="block3control"}, add another `if () then else`{:class="block3control"} block so the script can choose between `song2` and `song3`. Keep `song2` in the first branch.
 >
 > ```blocks3
 > when I receive (play music v)
@@ -74,6 +99,24 @@ Add background music and a button that skips to the next song.
 > +if <(song) = (2)> then
 > play sound (song2 v) until done
 > else
+> end
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Add the `play sound () until done`{:class="block3sound"} block inside the final `else`{:class="block3control"} branch so `song3` can play.
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> if <(song) = (1)> then
+> play sound (song1 v) until done
+> else
+> if <(song) = (2)> then
+> play sound (song2 v) until done
+> else
 > +play sound (song3 v) until done
 > end
 > end
@@ -82,7 +125,7 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
-> Add blocks to the bottom of the `forever`{:class="block3control"} loop so the next song plays after the current song finishes.
+> Add a `change () by ()`{:class="block3variables"} block to the bottom of the `forever`{:class="block3control"} loop so the next song plays after the current song finishes.
 >
 > ```blocks3
 > when I receive (play music v)
@@ -97,7 +140,49 @@ Add background music and a button that skips to the next song.
 > end
 > end
 > +change [song v] by (1)
+> end
+> ```
+
+> [!TASK]
+>
+> Add an `if () then`{:class="block3control"} block below the song change to check whether the song number has gone past `3`.
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> if <(song) = (1)> then
+> play sound (song1 v) until done
+> else
+> if <(song) = (2)> then
+> play sound (song2 v) until done
+> else
+> play sound (song3 v) until done
+> end
+> end
+> change [song v] by (1)
 > +if <(song) > (3)> then
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Inside the `if () then`{:class="block3control"} block, reset the song number to `1`.
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> if <(song) = (1)> then
+> play sound (song1 v) until done
+> else
+> if <(song) = (2)> then
+> play sound (song2 v) until done
+> else
+> play sound (song3 v) until done
+> end
+> end
+> change [song v] by (1)
+> if <(song) > (3)> then
 > +set [song v] to (1)
 > end
 > end
@@ -121,17 +206,43 @@ Add background music and a button that skips to the next song.
 
 > [!TASK]
 >
-> Click the `Stage`. Add a `when I receive ()`{:class="block3events"} script for the `skip` message to stop the current song and restart the music player on the next song.
+> Click the `Stage`. Add a `when I receive ()`{:class="block3events"} script for the `skip` message to stop the current song, move to the next song, and restart the music player.
 >
 > ```blocks3
 > +when I receive (skip v)
 > +stop [other scripts in sprite v]
 > +stop all sounds
 > +change [song v] by (1)
+> +broadcast (play music v)
+> ```
+
+> [!TASK]
+>
+> Add an `if () then`{:class="block3control"} block before the `broadcast ()`{:class="block3events"} block to check whether the song number has gone past `3`.
+>
+> ```blocks3
+> when I receive (skip v)
+> stop [other scripts in sprite v]
+> stop all sounds
+> change [song v] by (1)
 > +if <(song) > (3)> then
+> end
+> broadcast (play music v)
+> ```
+
+> [!TASK]
+>
+> Inside the `if () then`{:class="block3control"} block, reset the song number to `1`.
+>
+> ```blocks3
+> when I receive (skip v)
+> stop [other scripts in sprite v]
+> stop all sounds
+> change [song v] by (1)
+> if <(song) > (3)> then
 > +set [song v] to (1)
 > end
-> +broadcast (play music v)
+> broadcast (play music v)
 > ```
 
 Click the green flag and clean dishes. The music plays, and the skip button changes the song.
