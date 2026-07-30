@@ -1,13 +1,23 @@
-title: Project title in sentence case
+title: Dishwasher simulator
 hero_image: images/banner.png
-description: A short description of the project
+description: >-
+  Build a Scratch game where the player soaps, scrubs, and racks dirty dishes
+  one at a time.
 listed: false
 pdf: false
 steps:
   - title: What you will make
-  - title: Step title
+  - title: Start the dishwasher
     completion:
-      - engaged      
+      - engaged
+  - title: Add soap and a cloth
+  - title: Make one dish appear
+  - title: Scrub the dish
+  - title: Put it in the rack
+  - title: Copy the dish scripts
+  - title: Add music controls
+    completion:
+      - internal
   - title: Challenge
     challenge: true
     completion:

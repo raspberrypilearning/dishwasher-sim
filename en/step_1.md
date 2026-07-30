@@ -1,45 +1,22 @@
 ## What you will make
-OR
-## What you will do - change meta if you use this
 
-A brief description - one or two sentences. 
+You're going to build a **dishwasher simulator**. The player adds soap, scrubs a dirty dish until it sparkles, then drags it into the rack before the next dirty dish appears.
 
---- print-only ---
+> [!NOPRINT]
+>
+> <div class="scratch-preview">
+>  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/1362381726/?autostart=false" frameborder="0"></iframe>
+> </div>
 
-![ALT TEXT](images/IMAGE.png)
+> [!PRINTONLY]
+>
+> ![A dishwasher game with a kitchen sink, soap, a rack, and a dirty mug ready to clean.](images/finished-project.png)
 
---- /print-only ---
+You will start with a Scratch project that already has the sprites, costumes, and sounds. You will create the variables and list as you build the code.
 
---- no-print ---
-
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
-
---- /no-print ---
-
---- no-print ---
-
-Video embed
-
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
-</video>
-
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
-
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
-</div>
-
---- /no-print ---
+![The dirty dish sprites included in the starter project.](images/dish-sprites.png)
 
 ### You will need:
-- a
-- b
-- c
+
+- The Scratch editor
+- The [Dishwasher simulator starter](https://scratch.mit.edu/projects/1362382639/editor){:target="_blank"} project
