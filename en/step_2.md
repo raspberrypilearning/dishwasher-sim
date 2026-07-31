@@ -11,9 +11,10 @@ Set up the game state, place the rack, and make the cloth follow the mouse point
 > Open the `Variables`{:class="block3variables"} blocks menu. Make these variables **for all sprites**:
 >
 > - `clean plates`{:class="block3variables"} stores the player's score. Leave this variable ticked so it appears on the Stage.
-> - `clean`{:class="block3variables"} stores a Boolean value that says whether the current dish is clean. Untick this variable.
-> - `soap`{:class="block3variables"} stores a Boolean value that says whether the player has picked up soap. Untick this variable.
+> - `clean`{:class="block3variables"} stores a Boolean value that says whether the current dish is clean. **Untick this variable.**
+> - `soap`{:class="block3variables"} stores a Boolean value that says whether the player has picked up soap. **Untick this variable.**
 >
+> Make sure the only variable still ticked is `clean plates`{:class="block3variables"}:
 > <p align="center"><img src="images/clean-plates.png" alt="The clean plates variable ticked in the Variables menu." width="226" height="68" style="object-fit: contain;"></p>
 
 > [!TASK]
@@ -44,6 +45,10 @@ Set up the game state, place the rack, and make the cloth follow the mouse point
 > +broadcast (bowl v)
 > ```
 
+> [!TIP]
+>
+> To **initialise** a variable means to give it a starting value. Here, the game starts with a score of `0`, and `clean` and `soap` set to `false`.
+
 > [!TASK]
 >
 > Replace `bowl` in the `broadcast ()`{:class="block3events"} block with blocks that select a random item from `stuff`{:class="block3variables"}.
@@ -66,7 +71,7 @@ Set up the game state, place the rack, and make the cloth follow the mouse point
 >
 > The `rack` sprite is just a collision box. It looks plain because the drying rack the player sees is already drawn on the backdrop.
 >
-> <p align="center"><img src="images/rack.png" alt="The rack sprite." width="180" height="120" style="object-fit: contain;"></p>
+> <img src="images/rack-thumb.png" alt="The rack sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
@@ -79,9 +84,9 @@ Set up the game state, place the rack, and make the cloth follow the mouse point
 
 > [!TASK]
 >
-> Select the `cloth1` sprite in the Sprite pane. Add this script to make the cloth follow the mouse pointer and stay in front of the other sprites.
+> Select the `cloth` sprite in the Sprite pane. Add this script to make the cloth follow the mouse pointer and stay in front of the other sprites.
 >
-> <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="400" height="171" style="object-fit: contain;"></p>
+> <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked

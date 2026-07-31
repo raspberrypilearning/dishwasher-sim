@@ -44,19 +44,9 @@ Add every dish to the random selection, then copy the completed bowl scripts to 
 
 > [!TASK]
 >
-> Select each copied sprite in the Sprite pane. In the script that makes the dirty dish appear, change `when I receive (bowl)`{:class="block3events"} to the matching message from the table. Choose **New message** to create each message the first time you need it.
+> Select each copied sprite in the Sprite pane. In the script that makes the dirty dish appear, change `when I receive (bowl)`{:class="block3events"} to a message with the same name as the sprite. Choose **New message** to create each message the first time you need it.
 >
 > ![The eight dish sprites.](images/dish-sprites.png)
->
-> | Sprite | Receive message |
-> | --- | --- |
-> | `fork` | `fork` |
-> | `knife` | `knife` |
-> | `mug` | `mug` |
-> | `plate` | `plate` |
-> | `side plate` | `side plate` |
-> | `spoon` | `spoon` |
-> | `tea cup` | `tea cup` |
 >
 > Leave the first `switch costume to ()`{:class="block3looks"} block set to costume number `1`. Costume `1` is the filthy costume on every dish sprite, so this block is identical in every copied script.
 

@@ -6,7 +6,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Select the `soap` sprite in the Sprite pane. Add code so the player can use the soap before they scrub a dish.
 >
-> <p align="center"><img src="images/soap.png" alt="The soap sprite." width="150" height="120" style="object-fit: contain;"></p>
+> <img src="images/soap-thumb.png" alt="The soap sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when this sprite clicked
@@ -18,7 +18,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Add another script to the `soap` sprite to make it sit behind the dishes.
 >
-> <p align="center"><img src="images/soap.png" alt="The soap sprite." width="150" height="120" style="object-fit: contain;"></p>
+> <img src="images/soap-thumb.png" alt="The soap sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
@@ -32,7 +32,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Add a `forever`{:class="block3control"} loop beneath the size block.
 >
-> <p align="center"><img src="images/soap.png" alt="The soap sprite." width="150" height="120" style="object-fit: contain;"></p>
+> <img src="images/soap-thumb.png" alt="The soap sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
@@ -51,7 +51,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Inside the `forever`{:class="block3control"} loop, add a `repeat ()`{:class="block3control"} loop that gradually makes the soap larger.
 >
-> <p align="center"><img src="images/soap.png" alt="The soap sprite." width="150" height="120" style="object-fit: contain;"></p>
+> <img src="images/soap-thumb.png" alt="The soap sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked
@@ -63,11 +63,17 @@ Make the soap clickable and change the cloth to show the state of the game.
 > end
 > ```
 
+> [!TIP]
+>
+> To save time, right-click the top block in a group and choose **Duplicate** to copy the whole group. Try this with the `repeat ()` and `change size by ()` blocks, or with an `if () then else` block that already contains its operator and variable. Then change only what needs to be different.
+
 > [!TASK]
 >
 > Beneath the first `repeat ()`{:class="block3control"} loop, add another loop that returns the soap to `30` percent.
 >
-> <p align="center"><img src="images/soap.png" alt="The soap sprite." width="150" height="120" style="object-fit: contain;"></p>
+> Together, the two loops make the soap gently grow and shrink. This draws the player's attention and makes it clear that they can interact with the soap.
+>
+> <img src="images/soap-thumb.png" alt="The soap sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked
@@ -84,9 +90,9 @@ Make the soap clickable and change the cloth to show the state of the game.
 
 > [!TASK]
 >
-> Select the `cloth1` sprite in the Sprite pane. Add another script that starts by showing the dry cloth.
+> Select the `cloth` sprite in the Sprite pane. Add another script that starts by showing the dry cloth.
 >
-> <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="600" height="257" style="object-fit: contain;"></p>
+> <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
@@ -99,7 +105,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Replace the `switch costume to (cloth1 v)`{:class="block3looks"} block with an `if () then else`{:class="block3control"} block. Keep the dry cloth in the `else`{:class="block3control"} branch.
 >
-> <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="600" height="257" style="object-fit: contain;"></p>
+> <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked
@@ -115,7 +121,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Add a `switch costume to ()`{:class="block3looks"} block inside the first branch to show the hand when the dish is clean.
 >
-> <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="600" height="257" style="object-fit: contain;"></p>
+> <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked
@@ -132,7 +138,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Inside the `else`{:class="block3control"}, add another `if () then else`{:class="block3control"} block to check whether the player has picked up soap. Keep the dry cloth in the new `else`{:class="block3control"} branch.
 >
-> <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="600" height="257" style="object-fit: contain;"></p>
+> <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked
@@ -152,7 +158,7 @@ Make the soap clickable and change the cloth to show the state of the game.
 >
 > Add a `switch costume to ()`{:class="block3looks"} block inside the soap branch to show the soapy cloth.
 >
-> <p align="center"><img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="600" height="257" style="object-fit: contain;"></p>
+> <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked

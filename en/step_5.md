@@ -12,7 +12,7 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 >
 > Select the **Code** tab for the `bowl` sprite. Start a script that responds when the player clicks the bowl on the Stage, but only while it still needs cleaning.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when this sprite clicked
@@ -22,31 +22,15 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 
 > [!TASK]
 >
-> Inside the `if () then`{:class="block3control"} block, add feedback for a player who tries to clean the bowl without soap.
+> Inside the `if () then`{:class="block3control"} block, add an `if () then else`{:class="block3control"} block. Check whether the player has picked up soap. Leave both branches empty for now.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
->
-> ```blocks3
-> when this sprite clicked
-> if <(clean) = [false]> then
-> +say [You need soap!] for (2) seconds
-> +start sound (Collect v)
-> end
-> ```
-
-> [!TASK]
->
-> Put an `if () then else`{:class="block3control"} block around the feedback blocks. Check for soap in the first branch and keep the feedback in the `else`{:class="block3control"} branch, as shown.
->
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when this sprite clicked
 > if <(clean) = [false]> then
 > +if <(soap) = [true]> then
 > else
-> say [You need soap!] for (2) seconds
-> start sound (Collect v)
 > end
 > end
 > ```
@@ -55,7 +39,7 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 >
 > In the soap branch, add a `repeat until ()`{:class="block3control"} loop. Make it stop when the bowl reaches costume number `6`.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when this sprite clicked
@@ -64,8 +48,6 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 > +repeat until <(costume [number v]) = (6)>
 > end
 > else
-> say [You need soap!] for (2) seconds
-> start sound (Collect v)
 > end
 > end
 > ```
@@ -74,7 +56,7 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 >
 > Inside the new loop, wait until the player is pressing the mouse button.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when this sprite clicked
@@ -84,8 +66,6 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 > +wait until <mouse down?>
 > end
 > else
-> say [You need soap!] for (2) seconds
-> start sound (Collect v)
 > end
 > end
 > ```
@@ -94,7 +74,7 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 >
 > Under the `wait until ()`{:class="block3control"} block, play a random cleaning sound, move to the next costume, and add a short delay.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when this sprite clicked
@@ -107,8 +87,6 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 > +wait (0.2) seconds
 > end
 > else
-> say [You need soap!] for (2) seconds
-> start sound (Collect v)
 > end
 > end
 > ```
@@ -117,7 +95,7 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 >
 > After the `repeat until ()`{:class="block3control"} loop, set `clean`{:class="block3variables"} to `true`. This tells the other scripts that scrubbing has finished.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when this sprite clicked
@@ -131,8 +109,30 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 > end
 > +set [clean v] to [true]
 > else
-> say [You need soap!] for (2) seconds
-> start sound (Collect v)
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Finally, add feedback to the `else`{:class="block3control"} branch for a player who tries to clean the bowl without soap.
+>
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
+>
+> ```blocks3
+> when this sprite clicked
+> if <(clean) = [false]> then
+> if <(soap) = [true]> then
+> repeat until <(costume [number v]) = (6)>
+> wait until <mouse down?>
+> start sound (pick random (1) to (4))
+> next costume
+> wait (0.2) seconds
+> end
+> set [clean v] to [true]
+> else
+> +say [You need soap!] for (2) seconds
+> +start sound (Collect v)
 > end
 > end
 > ```

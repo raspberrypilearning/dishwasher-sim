@@ -1,6 +1,10 @@
 ## What you will make
 
-You're going to build a **dishwasher simulator**. The player adds soap, scrubs a dirty dish until it sparkles, then drags it into the rack before the next dirty dish appears.
+You're going to build a **cosy dishwasher simulator**. The player adds soap, scrubs a dirty dish until it sparkles, then drags it into the rack before the next dirty dish appears.
+
+> [!TIP]
+>
+> A **cosy game** is designed to feel calm, welcoming, and satisfying rather than stressful or competitive.
 
 > [!NOPRINT]
 >

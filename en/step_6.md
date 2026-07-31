@@ -4,9 +4,9 @@ Once the bowl is clean, let the player drag it into the rack and score a clean p
 
 > [!TASK]
 >
-> Select the `cloth1` sprite in the Sprite pane. Add a script that tells the player what to do when the bowl is clean.
+> Select the `cloth` sprite in the Sprite pane. Add a script that tells the player what to do when the bowl is clean.
 >
-> <img src="images/cloth-states.png" alt="The dry cloth, soapy cloth, and hand costumes." width="245" height="105" style="object-fit: contain;">
+> <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when I receive (clean v)
@@ -19,7 +19,7 @@ Once the bowl is clean, let the player drag it into the rack and score a clean p
 >
 > Select the `bowl` sprite in the Sprite pane. Start its clean-dish script: play a sound, remove the soap from the cloth, and make the bowl draggable.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when I receive (clean v)
@@ -34,7 +34,7 @@ Once the bowl is clean, let the player drag it into the rack and score a clean p
 >
 > Continue the same script. Wait until the bowl touches the `rack` sprite, then shrink the bowl so it looks as though it has been put away.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (clean v)
@@ -53,7 +53,7 @@ Once the bowl is clean, let the player drag it into the rack and score a clean p
 >
 > Add blocks to score the clean bowl, hide it, and reset it ready for another round.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (clean v)
@@ -77,7 +77,7 @@ Once the bowl is clean, let the player drag it into the rack and score a clean p
 >
 > At the bottom of the script, broadcast a random item from the `stuff`{:class="block3variables"} list. Using the list's length means this block will keep working after you add more dishes.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (clean v)

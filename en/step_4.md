@@ -10,7 +10,7 @@ The starter project names this sprite `bowl` and its costumes `bowl 1` to `bowl 
 >
 > Select the `bowl` sprite in the Sprite pane. Add a `when green flag clicked`{:class="block3events"} block with a `hide`{:class="block3looks"} block.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
@@ -23,7 +23,7 @@ The starter project names this sprite `bowl` and its costumes `bowl 1` to `bowl 
 >
 > Switch the sprite to costume number `1` so that the dirty bowl appears in the sink.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when I receive (bowl v)
@@ -39,7 +39,7 @@ The starter project names this sprite `bowl` and its costumes `bowl 1` to `bowl 
 >
 > Add a loop to the same script to make the bowl rise out of the sink.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (bowl v)
@@ -59,7 +59,7 @@ The starter project names this sprite `bowl` and its costumes `bowl 1` to `bowl 
 >
 > Add blocks to the bottom of the same script to wait until the bowl is clean. In the `broadcast ()`{:class="block3events"} block, choose **New message** and create a broadcast called `clean`.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">
+> <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (bowl v)

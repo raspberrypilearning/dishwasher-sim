@@ -8,8 +8,8 @@ Add background music, a volume slider, and a button that skips to the next song.
 >
 > Select the Stage, then make these variables **for all sprites** from the `Variables`{:class="block3variables"} blocks menu:
 >
-> - `song`{:class="block3variables"} stores which song is playing. Untick this variable.
-> - `music volume`{:class="block3variables"} stores how loud the music should be. Leave this variable ticked so it appears on the Stage.
+> - `song`{:class="block3variables"} stores which song is playing. **Untick this variable.**
+> - `music volume`{:class="block3variables"} stores how loud the music should be. Leave this variable ticked so it appears on the Stage. 
 >
 > <p align="center"><img src="images/music-volume.png" alt="The music volume variable ticked in the Variables menu." width="240" height="66" style="object-fit: contain;"></p>
 
@@ -34,64 +34,88 @@ Add background music, a volume slider, and a button that skips to the next song.
 
 > [!TASK]
 >
-> Start another script on the Stage with a `when I receive ()`{:class="block3events"} block, and choose the `play music` message. Start with `song2` as the default song.
+> Start another script on the Stage with a `when I receive ()`{:class="block3events"} block, and choose the `play music` message. Add an empty `forever`{:class="block3control"} loop.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > +when I receive (play music v)
 > +forever
-> +play sound (song2 v) until done
 > end
 > ```
 
 > [!TASK]
 >
-> Replace the `play sound (song2) until done`{:class="block3sound"} block with an `if () then else`{:class="block3control"} block. Check whether `song`{:class="block3variables"} is `1`, and keep `song2` in the `else`{:class="block3control"} branch.
+> At the top of the `forever`{:class="block3control"} loop, check whether the song number is greater than `3`. If it is, reset `song`{:class="block3variables"} to `1` so the music starts again from the first song.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (play music v)
 > forever
+> +if <(song) > (3)> then
+> +set [song v] to (1)
+> end
+> end
+> ```
+
+> [!TIP]
+>
+> A **rollover check** looks for a number that has gone past the last option and sends it back to the start. Here, a song number greater than `3` rolls over to `1`.
+
+> [!TASK]
+>
+> Beneath that check, add an `if () then else`{:class="block3control"} block. Check whether `song`{:class="block3variables"} is `1`. Leave both branches empty for now.
+>
+> <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> if <(song) > (3)> then
+> set [song v] to (1)
+> end
 > +if <(song) = (1)> then
 > else
-> play sound (song2 v) until done
 > end
 > end
 > ```
 
 > [!TASK]
 >
-> In the first branch, add a block that plays `song1`.
+> In the first branch, add a block that plays `song1` until it finishes.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (play music v)
 > forever
+> if <(song) > (3)> then
+> set [song v] to (1)
+> end
 > if <(song) = (1)> then
 > +play sound (song1 v) until done
 > else
-> play sound (song2 v) until done
 > end
 > end
 > ```
 
 > [!TASK]
 >
-> In the `else`{:class="block3control"} branch, put another `if () then else`{:class="block3control"} block around the `song2` block. Check whether `song`{:class="block3variables"} is `2`.
+> Inside the first `else`{:class="block3control"} branch, add another `if () then else`{:class="block3control"} block. Check whether `song`{:class="block3variables"} is `2`. Leave both new branches empty for now.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (play music v)
 > forever
+> if <(song) > (3)> then
+> set [song v] to (1)
+> end
 > if <(song) = (1)> then
 > play sound (song1 v) until done
 > else
 > +if <(song) = (2)> then
-> play sound (song2 v) until done
 > else
 > end
 > end
@@ -100,13 +124,39 @@ Add background music, a volume slider, and a button that skips to the next song.
 
 > [!TASK]
 >
-> In the final `else`{:class="block3control"} branch, add a block that plays `song3`.
+> In the `song = 2` branch, add a block that plays `song2` until it finishes.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (play music v)
 > forever
+> if <(song) > (3)> then
+> set [song v] to (1)
+> end
+> if <(song) = (1)> then
+> play sound (song1 v) until done
+> else
+> if <(song) = (2)> then
+> +play sound (song2 v) until done
+> else
+> end
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> In the final `else`{:class="block3control"} branch, add a block that plays `song3` until it finishes.
+>
+> <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> if <(song) > (3)> then
+> set [song v] to (1)
+> end
 > if <(song) = (1)> then
 > play sound (song1 v) until done
 > else
@@ -121,13 +171,16 @@ Add background music, a volume slider, and a button that skips to the next song.
 
 > [!TASK]
 >
-> Add a `change () by ()`{:class="block3variables"} block at the bottom of the `forever`{:class="block3control"} loop. This moves to the next song after one finishes.
+> At the bottom of the `forever`{:class="block3control"} loop, add a `change () by ()`{:class="block3variables"} block. This moves to the next song after one finishes.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > when I receive (play music v)
 > forever
+> if <(song) > (3)> then
+> set [song v] to (1)
+> end
 > if <(song) = (1)> then
 > play sound (song1 v) until done
 > else
@@ -141,36 +194,11 @@ Add background music, a volume slider, and a button that skips to the next song.
 > end
 > ```
 
-> [!TASK]
->
-> At the beginning of the `forever`{:class="block3control"} loop, check whether the song number is greater than `3`. If it is, reset `song`{:class="block3variables"} to `1`.
->
-> <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
->
-> ```blocks3
-> when I receive (play music v)
-> forever
-> +if <(song) > (3)> then
-> +set [song v] to (1)
-> end
-> if <(song) = (1)> then
-> play sound (song1 v) until done
-> else
-> if <(song) = (2)> then
-> play sound (song2 v) until done
-> else
-> play sound (song3 v) until done
-> end
-> end
-> change [song v] by (1)
-> end
-> ```
-
 ### Control the music
 
 > [!TASK]
 >
-> On the Stage, double-click the `music volume`{:class="block3variables"} variable display until it changes into a slider. The player will be able to drag the slider to change the music volume.
+> On the Stage, double-click the `music volume`{:class="block3variables"} variable display until it changes into a slider, then move it to the bottom corner of the stage. The player will be able to drag the slider to change the music volume.
 >
 > <p align="center"><img src="images/music-volume.png" alt="The music volume variable display on the Stage." width="240" height="66" style="object-fit: contain;"></p>
 
@@ -195,7 +223,7 @@ Add background music, a volume slider, and a button that skips to the next song.
 >
 > Select the `skip` sprite in the Sprite pane. Add a script that prevents the player from dragging the button.
 >
-> <p align="center"><img src="images/skip-button.png" alt="The skip button sprite." width="150" height="120" style="object-fit: contain;"></p>
+> <img src="images/skip-thumb.png" alt="The skip sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
@@ -206,7 +234,7 @@ Add background music, a volume slider, and a button that skips to the next song.
 >
 > Keep the `skip` sprite selected. Add another script that broadcasts the `skip` message when the player clicks the button on the Stage.
 >
-> <p align="center"><img src="images/skip-button.png" alt="The skip button sprite." width="150" height="120" style="object-fit: contain;"></p>
+> <img src="images/skip-thumb.png" alt="The skip sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when this sprite clicked
