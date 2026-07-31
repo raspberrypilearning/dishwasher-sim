@@ -12,7 +12,7 @@ You're going to build a **dishwasher simulator**. The player adds soap, scrubs a
 >
 > ![A dishwasher game with a kitchen sink, soap, a rack, and a dirty mug ready to clean.](images/finished-project.png)
 
-You will start with a Scratch project that already has the sprites, costumes, and sounds. You will create the variables and list as you build the code.
+You will start with a Scratch project that already has the sprites, costumes, and sounds. You will create the variables and the list as you build the code.
 
 ![The dirty dish sprites included in the starter project.](images/dish-sprites.png)
 

@@ -1,6 +1,6 @@
-## Copy the dish scripts
+## Add the other dishes
 
-Copy the bowl scripts to the other dish sprites, then edit the message and costume names.
+Add every dish to the random selection, then copy the completed bowl scripts to the other dish sprites.
 
 > [!TIP]
 >
@@ -8,80 +8,64 @@ Copy the bowl scripts to the other dish sprites, then edit the message and costu
 
 > [!TASK]
 >
-> Drag each of the four bowl scripts onto these other dish sprites:
+> Select the Stage and open the `Variables`{:class="block3variables"} blocks menu. Tick the checkbox next to `stuff`{:class="block3variables"} so that you can see the list on the Stage.
 >
-> - `fork_state_01_clean_sparkle`
-> - `knife_state_01_clean_sparkle`
-> - `mug_state_01_clean_sparkle`
-> - `plate_state_01_clean_sparkle`
-> - `side_plate_state_01_clean_sparkle`
-> - `spoon_state_01_clean_sparkle`
-> - `tea_cup_state_01_clean_sparkle`
+> ![The eight dish sprites.](images/dish-sprites.png)
 >
-> ![Dragging the bowl scripts onto the other dish sprites.](images/copy-scripts.gif)
-
-> [!TASK]
+> Use the plus button on the list to add these seven message names, one item on each line:
 >
-> On each copied sprite, edit the `when I receive (bowl v)`{:class="block3events"} block and the first `switch costume to ()`{:class="block3looks"} block.
->
-> | Sprite | Receive message | Dirty costume |
-> | --- | --- | --- |
-> | `fork_state_01_clean_sparkle` | `fork` | `fork_state_06_filthy` |
-> | `knife_state_01_clean_sparkle` | `knife` | `knife_state_06_filthy` |
-> | `mug_state_01_clean_sparkle` | `mug` | `mug_state_06_filthy` |
-> | `plate_state_01_clean_sparkle` | `plate` | `plate_state_06_filthy` |
-> | `side_plate_state_01_clean_sparkle` | `sideplate` | `side_plate_state_06_filthy` |
-> | `spoon_state_01_clean_sparkle` | `spoon` | `spoon_state_06_filthy` |
-> | `tea_cup_state_01_clean_sparkle` | `teacup` | `tea_cup_state_06_filthy` |
-
-> [!TASK]
->
-> Click the `Stage`. From the `Variables`{:class="block3variables"} blocks menu, choose **Make a List**. Make a list called `stuff`{:class="block3variables"} for all sprites.
->
-> Add these eight items to the list, one item on each line:
->
-> 1. `bowl`
 > 2. `fork`
 > 3. `knife`
 > 4. `mug`
 > 5. `plate`
-> 6. `sideplate`
+> 6. `side plate`
 > 7. `spoon`
-> 8. `teacup`
+> 8. `tea cup`
 >
-> Untick the list so it does not appear on the Stage.
+> ![The plus button circled on the stuff list.](images/add-item-to-list.png)
+>
+> Untick the checkbox next to `stuff`{:class="block3variables"} again so that the list does not appear on the Stage.
+>
+> ![Unticking the checkbox next to the stuff list in the Variables blocks menu.](images/hide-list.png)
 
 > [!TASK]
 >
-> Click the `Stage`. Update the `when green flag clicked`{:class="block3events"} script so the game chooses a random item from the `stuff`{:class="block3variables"} list.
+> Drag each of the bowl's four scripts onto every other dish sprite in the Sprite pane:
 >
-> ```blocks3
-> when green flag clicked
-> set [clean plates v] to (0)
-> set [clean v] to [false]
-> set [soap v] to [false]
-> +broadcast (item (pick random (1) to (8)) of [stuff v])
-> ```
+> - `fork`
+> - `knife`
+> - `mug`
+> - `plate`
+> - `side plate`
+> - `spoon`
+> - `tea cup`
+>
+> ![Dragging the four bowl scripts onto the other dish sprites.](images/copy-dish-scripts.gif)
 
 > [!TASK]
 >
-> Update the last `broadcast ()`{:class="block3events"} block in the clean script on the bowl and on each copied dish sprite, so the next item is random too.
+> Select each copied sprite in the Sprite pane. In the script that makes the dirty dish appear, change `when I receive (bowl)`{:class="block3events"} to the matching message from the table. Choose **New message** to create each message the first time you need it.
 >
-> ```blocks3
-> when I receive (clean v)
-> start sound (Coin v)
-> set [soap v] to [false]
-> set drag mode [draggable v]
-> wait until <touching (rack v)?>
-> repeat (60)
-> change size by (-2)
-> end
-> change [clean plates v] by (1)
-> hide
-> set size to (0) %
-> go to x: (0) y: (-140)
-> set [clean v] to [false]
-> +broadcast (item (pick random (1) to (8)) of [stuff v])
-> ```
+> ![The eight dish sprites.](images/dish-sprites.png)
+>
+> | Sprite | Receive message |
+> | --- | --- |
+> | `fork` | `fork` |
+> | `knife` | `knife` |
+> | `mug` | `mug` |
+> | `plate` | `plate` |
+> | `side plate` | `side plate` |
+> | `spoon` | `spoon` |
+> | `tea cup` | `tea cup` |
+>
+> Leave the first `switch costume to ()`{:class="block3looks"} block set to costume number `1`. Costume `1` is the filthy costume on every dish sprite, so this block is identical in every copied script.
 
-Click the green flag and play a few rounds. Different dirty dishes appear after you put each clean one in the rack.
+> [!TASK]
+>
+> Click the green flag and play several rounds. Check that different dirty dishes appear and that every dish starts on costume `1`, can be scrubbed clean, and increases the score when it reaches the rack.
+>
+> ![The eight dish sprites.](images/dish-sprites.png)
+
+> [!TIP]
+>
+> The random broadcast uses `length of [stuff]`{:class="block3variables"}, so it can choose from all eight list items without you changing the random-number range.
