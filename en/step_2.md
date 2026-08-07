@@ -10,9 +10,9 @@ Set up the game state, place the rack, and make the cloth follow the mouse point
 >
 > Open the `Variables`{:class="block3variables"} blocks menu. Make these variables **for all sprites**:
 >
-> - `clean plates`{:class="block3variables"} stores the player's score. Leave this variable ticked so it appears on the Stage.
-> - `clean`{:class="block3variables"} stores a Boolean value that says whether the current dish is clean. **Untick this variable.**
-> - `soap`{:class="block3variables"} stores a Boolean value that says whether the player has picked up soap. **Untick this variable.**
+> - `clean plates`{:class="block3variables"} — this stores the player's score. Leave this variable ticked so it appears on the Stage.
+> - `clean`{:class="block3variables"} — this stores a Boolean value that says whether the current dish is clean. **Untick this variable.**
+> - `soap`{:class="block3variables"} — this stores a Boolean value that says whether the player has picked up soap. **Untick this variable.**
 >
 > Make sure the only variable still ticked is `clean plates`{:class="block3variables"}:
 > <p align="center"><img src="images/clean-plates.png" alt="The clean plates variable ticked in the Variables menu." width="226" height="68" style="object-fit: contain;"></p>
@@ -31,7 +31,7 @@ Set up the game state, place the rack, and make the cloth follow the mouse point
 
 > [!TASK]
 >
-> Add this script to the Stage to reset the game. In this project, the `clean`{:class="block3variables"} and `soap`{:class="block3variables"} variables only store `true` or `false`, so initialise both with the Boolean value `false`.
+> Add the script below to the Stage to reset the game. In this project, the `clean`{:class="block3variables"} and `soap`{:class="block3variables"} variables only store `true` or `false`, so initialise both with the Boolean value `false`.
 >
 > From the menu in the `broadcast ()`{:class="block3events"} block, choose **New message**. Name the new broadcast `bowl`.
 >

@@ -8,8 +8,8 @@ Add background music, a volume slider, and a button that skips to the next song.
 >
 > Select the Stage, then make these variables **for all sprites** from the `Variables`{:class="block3variables"} blocks menu:
 >
-> - `song`{:class="block3variables"} stores which song is playing. **Untick this variable.**
-> - `music volume`{:class="block3variables"} stores how loud the music should be. Leave this variable ticked so it appears on the Stage. 
+> - `song`{:class="block3variables"} — this stores which song is playing. **Untick this variable.**
+> - `music volume`{:class="block3variables"} — this stores how loud the music should be. Leave this variable ticked so it appears on the Stage. 
 >
 > <p align="center"><img src="images/music-volume.png" alt="The music volume variable ticked in the Variables menu." width="240" height="66" style="object-fit: contain;"></p>
 
@@ -46,7 +46,7 @@ Add background music, a volume slider, and a button that skips to the next song.
 
 > [!TASK]
 >
-> At the top of the `forever`{:class="block3control"} loop, check whether the song number is greater than `3`. If it is, reset `song`{:class="block3variables"} to `1` so the music starts again from the first song.
+> At the top of the `forever`{:class="block3control"} loop, check whether the song number is greater than `3`. If it is, reset `song`{:class="block3variables"} to `1` so that the music starts again from the first song.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >

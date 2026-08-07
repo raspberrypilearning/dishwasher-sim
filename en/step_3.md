@@ -1,6 +1,6 @@
 ## Add soap and a cloth
 
-Make the soap clickable and change the cloth to show the state of the game.
+Make the soap clickable and make the cloth change to show the state of the game.
 
 > [!TASK]
 >
