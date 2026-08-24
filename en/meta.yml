@@ -14,7 +14,7 @@ steps:
   - title: Make one dish appear
   - title: Scrub the dish
   - title: Put it in the rack
-  - title: Copy the dish scripts
+  - title: Add the other dishes
   - title: Add music controls
     completion:
       - internal

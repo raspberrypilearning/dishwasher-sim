@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="224" viewBox="0 0 1320 224">
+  <rect width="1320" height="224" fill="#fff"/>
+  <g>
+    <image href="bowl-costume-1.png" x="5" y="0" width="210" height="172" preserveAspectRatio="xMidYMid meet"/>
+    <image href="bowl-costume-2.png" x="225" y="0" width="210" height="172" preserveAspectRatio="xMidYMid meet"/>
+    <image href="bowl-costume-3.png" x="445" y="0" width="210" height="172" preserveAspectRatio="xMidYMid meet"/>
+    <image href="bowl-costume-4.png" x="665" y="0" width="210" height="172" preserveAspectRatio="xMidYMid meet"/>
+    <image href="bowl-costume-5.png" x="885" y="0" width="210" height="172" preserveAspectRatio="xMidYMid meet"/>
+    <image href="bowl-costume-6.png" x="1105" y="0" width="210" height="172" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <g fill="#222" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <text x="110" y="211">bowl 1</text>
+    <text x="330" y="211">bowl 2</text>
+    <text x="550" y="211">bowl 3</text>
+    <text x="770" y="211">bowl 4</text>
+    <text x="990" y="211">bowl 5</text>
+    <text x="1210" y="211">bowl 6</text>
+  </g>
+</svg>

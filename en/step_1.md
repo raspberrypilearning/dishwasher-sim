@@ -1,6 +1,10 @@
 ## What you will make
 
-You're going to build a **dishwasher simulator**. The player adds soap, scrubs a dirty dish until it sparkles, then drags it into the rack before the next dirty dish appears.
+You're going to build a **cosy dishwasher simulator**. The player adds soap, scrubs a dirty dish until it sparkles, then drags it into the rack before the next dirty dish appears.
+
+> [!TIP]
+>
+> A **cosy game** is designed to feel calm, welcoming, and satisfying rather than stressful or competitive.
 
 > [!NOPRINT]
 >
@@ -12,7 +16,7 @@ You're going to build a **dishwasher simulator**. The player adds soap, scrubs a
 >
 > ![A dishwasher game with a kitchen sink, soap, a rack, and a dirty mug ready to clean.](images/finished-project.png)
 
-You will start with a Scratch project that already has the sprites, costumes, and sounds. You will create the variables and list as you build the code.
+You will start with a Scratch project that already has the sprites, costumes, and sounds. You will create variables and a list as you build the code.
 
 ![The dirty dish sprites included in the starter project.](images/dish-sprites.png)
 
