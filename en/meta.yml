@@ -1,9 +1,7 @@
 title: Dishwasher simulator
 hero_image: images/banner.png
-description: >-
-  Build a Scratch game where the player soaps, scrubs, and racks dirty dishes
-  one at a time.
-listed: false
+description: Make a dishwashing game in this Code Club Arcade project.
+listed: true
 pdf: false
 steps:
   - title: What you will make
