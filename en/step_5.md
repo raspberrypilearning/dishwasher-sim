@@ -4,7 +4,7 @@ Make the player add soap, then scrub through the bowl's dirty-to-clean costumes.
 
 > [!TASK]
 >
-> Select the `bowl` sprite in the Sprite pane, then select the **Costumes** tab. Check that its six costumes are in order: `bowl 1` is filthy and `bowl 6` is sparkling clean.
+> Select the `bowl` sprite in the Sprite pane, then select the **Costumes** tab. Check that its six costumes are named `1` to `6`: costume `1` is filthy and costume `6` is sparkling clean.
 >
 > ![The bowl costumes from filthy to sparkling clean.](images/bowl-cleaning-states.png)
 

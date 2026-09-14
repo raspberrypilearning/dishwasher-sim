@@ -2,7 +2,7 @@
 
 Code the `bowl` first. Later, you will copy its scripts to the other dish sprites.
 
-The starter project names this sprite `bowl` and its costumes `bowl 1` to `bowl 6`. The dirty bowl is costume number `1`, and the sparkling-clean bowl is costume number `6`.
+The starter project names this sprite `bowl` and its costumes `1` to `6`. Costume `1` is the dirty bowl, and costume `6` is the sparkling-clean bowl.
 
 ![The bowl costumes from filthy to sparkling clean.](images/bowl-cleaning-states.png)
 

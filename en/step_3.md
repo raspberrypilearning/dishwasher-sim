@@ -26,6 +26,10 @@ Make the soap clickable and make the cloth change to show the state of the game.
 > +go to [back v] layer
 > ```
 
+> [!NOTE]
+>
+> `set drag mode [not draggable]` only prevents dragging in full-screen mode. While you test in the editor, you can still drag the soap and other sprites.
+
 > [!TASK]
 >
 > Start one more script on the `soap` sprite. Set its size to `30` percent before adding any blocks that change its size. This known starting size makes it easy to reset the soap if you make a mistake.
