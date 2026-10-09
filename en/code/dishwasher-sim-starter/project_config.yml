@@ -1,4 +1,4 @@
 name: "Dishwasher simulator starter"
 identifier: "dishwasher-sim-starter"
-type: 'scratch'
+type: 'code_editor_scratch'
 build: true
