@@ -1,0 +1,17 @@
+clean plates
+
+clean
+
+soap
+
+stuff
+
+bowl
+
+true
+
+false
+
+You need soap!
+
+Now put it in the rack!
