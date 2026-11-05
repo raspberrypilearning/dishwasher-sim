@@ -1,0 +1,22 @@
+title: Dishwasher simulator
+hero_image: images/banner.png
+description: Make a dishwashing game in this Code Club arcade project.
+listed: true
+pdf: false
+steps:
+  - title: Ce que tu vas faire
+  - title: Start the dishwasher
+    completion:
+      - engaged
+  - title: Add soap and a cloth
+  - title: Make one dish appear
+  - title: Scrub the dish
+  - title: Put it in the rack
+  - title: Add the other dishes
+  - title: Add music controls
+    completion:
+      - internal
+  - title: Défi
+    challenge: true
+    completion:
+      - external
