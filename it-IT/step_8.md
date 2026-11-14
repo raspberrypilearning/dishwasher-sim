@@ -34,7 +34,7 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 
 > [!TASK]
 >
-> Avvia un altro script sullo stage con un blocco `quando ricevo ()`{:class="block3events"}, e scegli il messaggio `play music`. Avvia il ciclo `per sempre`{: class = "block3control"}.
+> Avvia un altro script sullo stage con un blocco `quando ricevo ()`{:class="block3events"}, e scegli il messaggio `play music`. Avvia il ciclo `per sempre`{:class="block3control"}.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
