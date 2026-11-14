@@ -11,7 +11,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > +when this sprite clicked
 > +start sound (Bubbles v)
-> +set [soap v] to [true]
+> +set [sapone v] to [vero]
 > ```
 
 > [!TASK]
@@ -22,13 +22,13 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 >
 > ```blocks3
 > +when green flag clicked
-> +set drag mode [not draggable v]
-> +go to [back v] layer
+> +set drag mode [non trascinabile v]
+> +go to [secondo v] layer
 > ```
 
 > [!NOTE]
 >
-> `set drag mode [not draggable]` impedisce il trascinamento solo in modalità a schermo intero. Durante il test nell'editor, puoi ancora trascinare il sapone e altri sprite.
+> `rendi lo sprite [non trascinabile]` impedisce il trascinamento solo in modalità a schermo intero. Durante il test nell'editor, puoi ancora trascinare il sapone e altri sprite.
 
 > [!TASK]
 >
@@ -69,7 +69,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 
 > [!TIP]
 >
-> Per risparmiare tempo, fai clic con il tasto destro del mouse sul blocco superiore di un gruppo e scegli **Duplica** per copiare l'intero gruppo. Prova con i blocchi `repeat ()` e `change size by ()`, o con un blocco `if () poi else` che contiene già il suo operatore e variabile. Quindi modifica solo ciò che deve essere diverso.
+> Per risparmiare tempo, fai clic con il tasto destro del mouse sul blocco superiore di un gruppo e scegli **Duplica** per copiare l'intero gruppo. Prova con i blocchi `ripeti () volte` e `cambia dimensione di ()`, o con un blocco `se () allora altrimenti` che contiene già il suo operatore e variabile. Quindi modifica solo ciò che deve essere diverso.
 
 > [!TASK]
 >
@@ -114,7 +114,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > when green flag clicked
 > forever
-> +if <(clean) = [true]> then
+> +if <(pulito) = [vero]> then
 > else
 > switch costume to (cloth1 v)
 > end
@@ -130,7 +130,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(clean) = [true]> then
+> if <(pulito) = [vero]> then
 > +switch costume to (hand v)
 > else
 > switch costume to (cloth1 v)
@@ -147,10 +147,10 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(clean) = [true]> then
+> if <(pulito) = [vero]> then
 > switch costume to (hand v)
 > else
-> +if <(soap) = [true]> then
+> +if <(sapone) = [vero]> then
 > else
 > switch costume to (cloth1 v)
 > end
@@ -167,10 +167,10 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(clean) = [true]> then
+> if <(pulito) = [vero]> then
 > switch costume to (hand v)
 > else
-> if <(soap) = [true]> then
+> if <(sapone) = [vero]> then
 > +switch costume to (cloth2 v)
 > else
 > switch costume to (cloth1 v)

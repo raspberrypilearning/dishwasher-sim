@@ -2,7 +2,7 @@
 
 Codifica prima la `ciotola`. In seguito, copierai i suoi script sugli altri sprite dei piatti.
 
-Il progetto iniziale chiama questo `bowl` dello sprite e i suoi costumi `1` a `6`. Il costume `1` è la ciotola sporca, e il costume `6` è la ciotola scintillante.
+Il progetto iniziale chiama questo `ciotola` dello sprite e i suoi costumi `1` a `6`. Il costume `1` è la ciotola sporca, e il costume `6` è la ciotola scintillante.
 
 ![La ciotola costumi da sporco a scintillante pulito.](images/bowl-cleaning-states.png)
 
@@ -19,20 +19,20 @@ Il progetto iniziale chiama questo `bowl` dello sprite e i suoi costumi `1` a `6
 
 > [!TASK]
 >
-> Avvia un nuovo script sullo sprite dell'ostacolo con un blocco `quando vengo clonato`{:class="block3control"}. Seleziona la trasmissione "bowl" che hai creato in precedenza.
+> Avvia un nuovo script sullo sprite dell'ostacolo con un blocco `quando vengo clonato`{:class="block3control"}. Seleziona la trasmissione `ciotola` che hai creato in precedenza.
 >
 > Cambia lo sprite con il costume numero `1` in modo che la ciotola sporca appaia nel lavandino.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (bowl v)
+> +when I receive (ciotola v)
 > +switch costume to (1)
-> +set [clean v] to [false]
+> +set [pulito v] to [falso]
 > +set size to (0) %
 > +go to x: (0) y: (-120)
 > +show
-> +set drag mode [not draggable v]
+> +set drag mode [non trascinabile v]
 > ```
 
 > [!TASK]
@@ -42,13 +42,13 @@ Il progetto iniziale chiama questo `bowl` dello sprite e i suoi costumi `1` a `6
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (bowl v)
+> when I receive (ciotola v)
 > switch costume to (1)
-> set [clean v] to [false]
+> set [pulito v] to [falso]
 > set size to (0) %
 > go to x: (0) y: (-120)
 > show
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > +repeat (20)
 > +change y by (6)
 > +change size by (6)
@@ -57,24 +57,24 @@ Il progetto iniziale chiama questo `bowl` dello sprite e i suoi costumi `1` a `6
 
 > [!TASK]
 >
-> Aggiungi dei blocchi in fondo allo stesso script per attendere che la ciotola sia pulita. Nel blocco `broadcast ()`{:class="block3events"}, scegli **Nuovo messaggio** e crea un broadcast chiamato `clean`.
+> Aggiungi dei blocchi in fondo allo stesso script per attendere che la ciotola sia pulita. Nel blocco `invia a tutti ()`{:class="block3events"}, scegli **Nuovo messaggio** e crea un broadcast chiamato `pulito`.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (bowl v)
+> when I receive (ciotola v)
 > switch costume to (1)
-> set [clean v] to [false]
+> set [pulito v] to [falso]
 > set size to (0) %
 > go to x: (0) y: (-120)
 > show
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > repeat (20)
 > change y by (6)
 > change size by (6)
 > end
-> +wait until <(clean) = [true]>
-> +broadcast (clean v)
+> +wait until <(pulito) = [vero]>
+> +broadcast (pulito v)
 > ```
 
 > [!TASK]

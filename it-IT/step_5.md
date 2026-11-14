@@ -16,20 +16,20 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 >
 > ```blocks3
 > +when this sprite clicked
-> +if <(clean) = [false]> then
+> +if <(pulito) = [falso]> then
 > end
 > ```
 
 > [!TASK]
 >
-> Innanzitutto, racchiudi il blocco `go to x: y:`{:class="block3motion"} in un blocco `if () then`{:class="block3control"}. Verifica se il giocatore ha raccolto il sapone. Per ora, lascia entrambi i rami vuoti.
+> Innanzitutto, racchiudi il blocco `vai a x: y:`{:class="block3motion"} in un blocco `se () allora`{:class="block3control"}. Verifica se il giocatore ha raccolto il sapone. Per ora, lascia entrambi i rami vuoti.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> +if <(soap) = [true]> then
+> if <(pulito) = [falso]> then
+> +if <(sapone) = [vero]> then
 > else
 > end
 > end
@@ -43,9 +43,9 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
-> +repeat until <(costume [number v]) = (6)>
+> if <(pulito) = [falso]> then
+> if <(sapone) = [vero]> then
+> +repeat until <(costume [numero v]) = (6)>
 > end
 > else
 > end
@@ -60,9 +60,9 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
-> repeat until <(costume [number v]) = (6)>
+> if <(pulito) = [falso]> then
+> if <(sapone) = [vero]> then
+> repeat until <(costume [numero v]) = (6)>
 > +wait until <mouse down?>
 > end
 > else
@@ -78,9 +78,9 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
-> repeat until <(costume [number v]) = (6)>
+> if <(pulito) = [falso]> then
+> if <(sapone) = [vero]> then
+> repeat until <(costume [numero v]) = (6)>
 > wait until <mouse down?>
 > +start sound (pick random (1) to (4))
 > +next costume
@@ -93,21 +93,21 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 
 > [!TASK]
 >
-> Dopo il ciclo `ripeti fino a quando ()`{:class="block3control"}, imposta `puliti`{:class="block3variables"} a `vero`. Questo comunica agli altri script che la pulizia dei dati è terminata.
+> Dopo il ciclo `ripeti fino a quando ()`{:class="block3control"}, imposta `pulito`{:class="block3variables"} a `vero`. Questo comunica agli altri script che la pulizia dei dati è terminata.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
-> repeat until <(costume [number v]) = (6)>
+> if <(pulito) = [falso]> then
+> if <(sapone) = [vero]> then
+> repeat until <(costume [numero v]) = (6)>
 > wait until <mouse down?>
 > start sound (pick random (1) to (4))
 > next costume
 > wait (0.2) seconds
 > end
-> +set [clean v] to [true]
+> +set [pulito v] to [vero]
 > else
 > end
 > end
@@ -121,17 +121,17 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
-> repeat until <(costume [number v]) = (6)>
+> if <(pulito) = [falso]> then
+> if <(sapone) = [vero]> then
+> repeat until <(costume [numero v]) = (6)>
 > wait until <mouse down?>
 > start sound (pick random (1) to (4))
 > next costume
 > wait (0.2) seconds
 > end
-> set [clean v] to [true]
+> set [pulito v] to [vero]
 > else
-> +say [You need soap!] for (2) seconds
+> +say [Hai bisogno di sapone!] for (2) seconds
 > +start sound (Collect v)
 > end
 > end
