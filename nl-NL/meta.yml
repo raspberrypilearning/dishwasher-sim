@@ -1,0 +1,22 @@
+title: Afwas simulator
+hero_image: images/banner.png
+description: Maak een afwasspel in dit Code Club arcade-project.
+listed: true
+pdf: false
+steps:
+  - title: Wat ga je maken
+  - title: Begin met afwassen
+    completion:
+      - engaged
+  - title: Voeg zeep en een vaatdoek toe
+  - title: Laat de vaat verschijnen
+  - title: Doe de afwas
+  - title: Plaats het in het afdruiprek
+  - title: Voeg de andere vaat toe
+  - title: Muziek besturing toevoegen
+    completion:
+      - internal
+  - title: Uitdaging
+    challenge: true
+    completion:
+      - external
