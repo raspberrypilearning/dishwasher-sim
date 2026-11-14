@@ -1,0 +1,17 @@
+piatti puliti
+
+pulito
+
+sapone
+
+stoviglie
+
+ciotola
+
+true
+
+falso
+
+Hai bisogno di sapone!
+
+Mettilo nello scolapiatti!
