@@ -4,7 +4,7 @@ Imposta lo stato del gioco, posiziona il supporto e fai in modo che il tessuto s
 
 > [!TASK]
 >
-> Il progetto [Avviatore simulatore di lavastoviglie](https://scratch.mit.edu/projects/1362382639/editor){:target="_blank"}. Ha già gli sprite, costumi e suoni di cui hai bisogno.
+> Il progetto [Avviatore simulatore di lavastoviglie](https://scratch.mit.edu/projects/1440248677/editor){:target="_blank"}. Ha già gli sprite, costumi e suoni di cui hai bisogno.
 
 > [!TASK]
 >

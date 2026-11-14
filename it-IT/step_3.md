@@ -4,7 +4,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 
 > [!TASK]
 >
-> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi il codice in modo che il giocatore possa usare il sapone prima di lavare un piatto.
+> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi il codice in modo che il giocatore possa usare il sapone prima di lavare un piatto.
 >
 > <img src="images/soap-thumb.png" alt="The soap sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
@@ -94,20 +94,20 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 
 > [!TASK]
 >
-> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi un altro script che inizi mostrando il panno asciutto.
+> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi un altro script che inizi mostrando il panno asciutto.
 >
 > <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
 > +forever
-> +switch costume to (cloth1 v)
+> +switch costume to (strofinaccio1 v)
 > end
 > ```
 
 > [!TASK]
 >
-> Sostituisci il `passa al costume (cloth1 v)`{:class="block3looks"} con un blocco `se () allora`{:class="block3control"}. Mantieni il panno asciutto nel ramo `altrimenti`{:class="block3control"}.
+> Sostituisci il `passa al costume (strofinaccio1 v)`{:class="block3looks"} con un blocco `se () allora`{:class="block3control"}. Mantieni il panno asciutto nel ramo `altrimenti`{:class="block3control"}.
 >
 > <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
@@ -116,7 +116,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > forever
 > +if <(pulito) = [vero]> then
 > else
-> switch costume to (cloth1 v)
+> switch costume to (strofinaccio1 v)
 > end
 > end
 > ```
@@ -133,7 +133,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > if <(pulito) = [vero]> then
 > +switch costume to (hand v)
 > else
-> switch costume to (cloth1 v)
+> switch costume to (strofinaccio1 v)
 > end
 > end
 > ```
@@ -152,7 +152,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > else
 > +if <(sapone) = [vero]> then
 > else
-> switch costume to (cloth1 v)
+> switch costume to (strofinaccio1 v)
 > end
 > end
 > end
@@ -171,9 +171,9 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > switch costume to (hand v)
 > else
 > if <(sapone) = [vero]> then
-> +switch costume to (cloth2 v)
+> +switch costume to (strofinaccio2 v)
 > else
-> switch costume to (cloth1 v)
+> switch costume to (strofinaccio1 v)
 > end
 > end
 > end

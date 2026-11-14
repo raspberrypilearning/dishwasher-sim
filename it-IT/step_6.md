@@ -4,7 +4,7 @@ Una volta che la ciotola è pulita, lascia che il giocatore la trascini nel supp
 
 > [!TASK]
 >
-> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi uno script che indichi al giocatore cosa fare quando la ciotola è pulita.
+> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi uno script che indichi al giocatore cosa fare quando la ciotola è pulita.
 >
 > <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
@@ -17,7 +17,7 @@ Una volta che la ciotola è pulita, lascia che il giocatore la trascini nel supp
 
 > [!TASK]
 >
-> Seleziona lo sprite `cloth` nel pannello Sprite. Avvia lo script per lavare i piatti: riproduci un suono, rimuovi il sapone dal panno e rendi la ciotola trascinabile.
+> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Avvia lo script per lavare i piatti: riproduci un suono, rimuovi il sapone dal panno e rendi la ciotola trascinabile.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >

@@ -8,7 +8,7 @@ Il progetto iniziale chiama questo `ciotola` dello sprite e i suoi costumi `1` a
 
 > [!TASK]
 >
-> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi un blocco `quando si clicca sulla bandiera verde`{:class="block3events"} con un blocco `nascondi`{:class="block3looks"}.
+> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi un blocco `quando si clicca sulla bandiera verde`{:class="block3events"} con un blocco `nascondi`{:class="block3looks"}.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >

@@ -83,7 +83,7 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 
 > [!TASK]
 >
-> Nel primo ramo, aggiungi un blocco che riproduca `song1` fino al termine.
+> Nel primo ramo, aggiungi un blocco che riproduca `canzone1` fino al termine.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
@@ -221,7 +221,7 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 
 > [!TASK]
 >
-> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi uno script che impedisce al giocatore di trascinare il pulsante.
+> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi uno script che impedisce al giocatore di trascinare il pulsante.
 >
 > <img src="images/skip-thumb.png" alt="The skip sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >

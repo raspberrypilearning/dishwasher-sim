@@ -9,7 +9,7 @@ Costruirai un **accogliente simulatore di lavastoviglie**. Il giocatore aggiunge
 > [!NOPRINT]
 >
 > <div class="scratch-preview">
->  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/1362381726/?autostart=false" frameborder="0"></iframe>
+>  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/1440253133/?autostart=false" frameborder="0"></iframe>
 > </div>
 
 > [!PRINTONLY]
@@ -23,4 +23,4 @@ Inizierai con un progetto Scratch che ha già gli sprite, i costumi e i suoni. D
 ### Ti serviranno:
 
 - L'editor di Scratch
-- Il progetto [Avviatore simulatore di lavastoviglie](https://scratch.mit.edu/projects/1362382639/editor){:target="_blank"}
+- Il progetto [Avviatore simulatore di lavastoviglie](https://scratch.mit.edu/projects/1440248677/editor){:target="_blank"}

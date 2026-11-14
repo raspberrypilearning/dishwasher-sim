@@ -4,13 +4,13 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 
 > [!TASK]
 >
-> Selezionare lo sprite `bowl` nel riquadro Sprite, quindi selezionare la scheda **Costumi**. Controlla che i suoi sei costumi siano chiamati `1` a `6`: il costume `1` è sporco e il costume `6` è scintillante pulito.
+> Selezionare lo sprite `ciotola` nel riquadro Sprite, quindi selezionare la scheda **Costumi**. Controlla che i suoi sei costumi siano chiamati `1` a `6`: il costume `1` è sporco e il costume `6` è scintillante pulito.
 >
 > ![La ciotola costumi da sporco a scintillante pulito.](images/bowl-cleaning-states.png)
 
 > [!TASK]
 >
-> Seleziona la scheda **Codice** per lo sprite `bowl`. Avvia uno script che risponde quando il giocatore fa clic sulla ciotola sullo Stage, ma solo mentre ha ancora bisogno di pulizia.
+> Seleziona la scheda **Codice** per lo sprite `ciotola`. Avvia uno script che risponde quando il giocatore fa clic sulla ciotola sullo Stage, ma solo mentre ha ancora bisogno di pulizia.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
@@ -141,7 +141,7 @@ Fai aggiungere il sapone al giocatore, poi strofina i costumi nella ciotola, pas
 >
 > Test: Clicca sulla bandierina verde e muovi il mouse sullo stage. Successivamente, fai clic sul sapone e tieni premuto sulla ciotola per strofinarla e pulirla.
 >
-> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;">1 2<img src="images/soap.png" alt="The soap sprite." width="128" height="105" style="object-fit: contain;">
+> <img src="images/bowl-costume-1.png" alt="The dirty bowl sprite." width="138" height="105" style="object-fit: contain;"> <img src="images/soap.png" alt="The soap sprite." width="128" height="105" style="object-fit: contain;">
 
 > [!TIP]
 >
