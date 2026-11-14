@@ -1,0 +1,4 @@
+name: "Démarrage Simulateur de lave-vaisselle"
+identifier: "dishwasher-sim-starter"
+type: 'code_editor_scratch'
+build: true

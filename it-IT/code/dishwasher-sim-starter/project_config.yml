@@ -1,0 +1,4 @@
+name: "Simulatore di lavastoviglie - Progetto di partenza"
+identifier: "dishwasher-sim-starter"
+type: 'code_editor_scratch'
+build: true
