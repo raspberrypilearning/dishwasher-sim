@@ -1,0 +1,23 @@
+---
+title: Simulatore di lavastoviglie
+hero_image: images/banner.png
+description: Realizza un gioco di lavaggio piatti in questo progetto arcade di Code Club.
+listed: true
+pdf: false
+steps:
+  - title: Cosa creerai
+  - title: Avviare la lavastoviglie
+    completion:
+      - engaged
+  - title: Aggiungi sapone e un panno
+  - title: Fai apparire un piatto
+  - title: Strofinare il piatto
+  - title: Mettilo nello scolapiatti
+  - title: Aggiungi gli altri piatti
+  - title: Aggiungi controlli musicali
+    completion:
+      - internal
+  - title: Sfida
+    challenge: true
+    completion:
+      - external
