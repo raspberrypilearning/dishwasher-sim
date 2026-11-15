@@ -26,7 +26,7 @@ Make the soap clickable and make the cloth change to show the state of the game.
 > +go to [back v] layer
 > ```
 
-> [!NOTE]
+> [!TIP]
 >
 > `set drag mode [not draggable]` only prevents dragging in full-screen mode. While you test in the editor, you can still drag the soap and other sprites.
 
