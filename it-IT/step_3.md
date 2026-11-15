@@ -26,7 +26,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > +go to [secondo v] layer
 > ```
 
-> [!NOTE]
+> [!TIP]
 >
 > `rendi lo sprite [non trascinabile]` impedisce il trascinamento solo in modalità a schermo intero. Durante il test nell'editor, puoi ancora trascinare il sapone e altri sprite.
 
@@ -131,7 +131,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > when green flag clicked
 > forever
 > if <(pulito) = [vero]> then
-> +switch costume to (hand v)
+> +switch costume to (mano v)
 > else
 > switch costume to (strofinaccio1 v)
 > end
@@ -148,7 +148,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > when green flag clicked
 > forever
 > if <(pulito) = [vero]> then
-> switch costume to (hand v)
+> switch costume to (mano v)
 > else
 > +if <(sapone) = [vero]> then
 > else
@@ -168,7 +168,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > when green flag clicked
 > forever
 > if <(pulito) = [vero]> then
-> switch costume to (hand v)
+> switch costume to (mano v)
 > else
 > if <(sapone) = [vero]> then
 > +switch costume to (strofinaccio2 v)
