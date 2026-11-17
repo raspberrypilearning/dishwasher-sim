@@ -1,0 +1,4 @@
+name: "Simulateur de lave-vaisselle terminé"
+identifier: "dishwasher-sim-complete"
+type: 'scratch'
+build: false

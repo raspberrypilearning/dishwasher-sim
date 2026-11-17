@@ -17,29 +17,29 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 >
 > Mantieni lo Stage selezionato. Aggiungi i blocchi di configurazione musicale vicino all'inizio del suo script `Quando si clicca sulla bandierina verde`{:class="block3events"}, prima della trasmissione casuale del disegno.
 >
-> Nel blocco `invia a tutti ()`{:class="block3events"}, scegli **Nuovo messaggio** e crea un broadcast chiamato `pulito`.
+> Nel blocco `invia a tutti ()`{:class="block3events"}, scegli **Nuovo messaggio** e crea un broadcast chiamato `puliti`.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked
-> set [piatti puliti v] to (0)
-> set [pulito v] to [falso]
-> set [sapone v] to [falso]
-> +set [canzone v] to (pick random (1) to (3))
-> +set [volume suono v] to (25)
-> +broadcast (riproduci musica v)
-> broadcast (item (pick random (1) to (length of [stoviglie v])) of [stoviglie v])
+> set [clean plates v] to (0)
+> set [clean v] to [false]
+> set [soap v] to [false]
+> +set [song v] to (pick random (1) to (3))
+> +set [music volume v] to (25)
+> +broadcast (play music v)
+> broadcast (item (pick random (1) to (length of [stuff v])) of [stuff v])
 > ```
 
 > [!TASK]
 >
-> Avvia un altro script sullo stage con un blocco `quando ricevo ()`{:class="block3events"}, e scegli il messaggio `riproduci musica`. Avvia il ciclo `per sempre`{:class="block3control"}.
+> Avvia un altro script sullo stage con un blocco `quando ricevo ()`{:class="block3events"}, e scegli il messaggio `play music`. Avvia il ciclo `per sempre`{: class = "block3control"}.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (riproduci musica v)
+> +when I receive (play music v)
 > +forever
 > end
 > ```
@@ -51,10 +51,10 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (riproduci musica v)
+> when I receive (play music v)
 > forever
-> +if <(canzone) > (3)> then
-> +set [socanzoneng v] to (1)
+> +if <(song) > (3)> then
+> +set [song v] to (1)
 > end
 > end
 > ```
@@ -70,12 +70,12 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (riproduci musica v)
+> when I receive (play music v)
 > forever
-> if <(canzone) > (3)> then
-> set [canzone v] to (1)
+> if <(song) > (3)> then
+> set [song v] to (1)
 > end
-> +if <(canzone) = (1)> then
+> +if <(song) = (1)> then
 > else
 > end
 > end
@@ -83,18 +83,18 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 
 > [!TASK]
 >
-> Nel primo ramo, aggiungi un blocco che riproduca `canzone1` fino al termine.
+> Nel primo ramo, aggiungi un blocco che riproduca `song1` fino al termine.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (riproduci musica v)
+> when I receive (play music v)
 > forever
-> if <(canzone) > (3)> then
-> set [canzone v] to (1)
+> if <(song) > (3)> then
+> set [song v] to (1)
 > end
-> if <(canzone) = (1)> then
-> +play sound (canzone1 v) until done
+> if <(song) = (1)> then
+> +play sound (song1 v) until done
 > else
 > end
 > end
@@ -102,43 +102,20 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 
 > [!TASK]
 >
-> All'interno del primo ramo `altrimenti`{:class="block3control"}, aggiungi un altro blocco `se () allora altrimenti`{:class="block3control"}. Verifica se `canzone`{:class="block3variables"} è `2`. Per ora, lascia entrambi i rami vuoti.
+> Innanzitutto, racchiudi il blocco `vai a x: y:`{:class="block3motion"} in un blocco `se () allora`{:class="block3control"}. Verifica se `canzone`{:class="block3variables"} è `2`. Per ora, lascia entrambi i rami vuoti.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (riproduci musica v)
+> when I receive (play music v)
 > forever
-> if <(canzone) > (3)> then
-> set [canzone v] to (1)
+> if <(song) > (3)> then
+> set [song v] to (1)
 > end
-> if <(canzone) = (1)> then
-> play sound (canzone1 v) until done
+> if <(song) = (1)> then
+> play sound (song1 v) until done
 > else
-> +if <(canzone) = (2)> then
-> else
-> end
-> end
-> end
-> ```
-
-> [!TASK]
->
-> Nel primo ramo, aggiungi un blocco che riproduca `canzone1` fino al termine.
->
-> <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
->
-> ```blocks3
-> when I receive (riproduci musica v)
-> forever
-> if <(canzone) > (3)> then
-> set [canzone v] to (1)
-> end
-> if <(canzone) = (1)> then
-> play sound (canzone1 v) until done
-> else
-> if <(canzone) = (2)> then
-> +play sound (canzone2 v) until done
+> +if <(song) = (2)> then
 > else
 > end
 > end
@@ -147,23 +124,46 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 
 > [!TASK]
 >
-> Nell'ultimo ramo `altrimenti`{:class="block3control"}, aggiungi un blocco che riproduca `canzone3` fino al termine.
+> Nel primo ramo, aggiungi un blocco che riproduca `song1` fino al termine.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (riproduci musica v)
+> when I receive (play music v)
 > forever
-> if <(canzone) > (3)> then
-> set [canzone v] to (1)
+> if <(song) > (3)> then
+> set [song v] to (1)
 > end
-> if <(canzone) = (1)> then
-> play sound (canzone1 v) until done
+> if <(song) = (1)> then
+> play sound (song1 v) until done
 > else
-> if <(canzone) = (2)> then
-> play sound (canzone2 v) until done
+> if <(song) = (2)> then
+> +play sound (song2 v) until done
 > else
-> +play sound (canzone3 v) until done
+> end
+> end
+> end
+> ```
+
+> [!TASK]
+>
+> Nell'ultimo ramo `altrimenti`{:class="block3control"}, aggiungi un blocco che riproduca `song3` fino al termine.
+>
+> <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
+>
+> ```blocks3
+> when I receive (play music v)
+> forever
+> if <(song) > (3)> then
+> set [song v] to (1)
+> end
+> if <(song) = (1)> then
+> play sound (song1 v) until done
+> else
+> if <(song) = (2)> then
+> play sound (song2 v) until done
+> else
+> +play sound (song3 v) until done
 > end
 > end
 > end
@@ -176,21 +176,21 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (riproduci musica v)
+> when I receive (play music v)
 > forever
-> if <(canzone) > (3)> then
-> set [canzone v] to (1)
+> if <(song) > (3)> then
+> set [song v] to (1)
 > end
-> if <(canzone) = (1)> then
-> play sound (canzone1 v) until done
+> if <(song) = (1)> then
+> play sound (song1 v) until done
 > else
-> if <(canzone) = (2)> then
-> play sound (canzone2 v) until done
+> if <(song) = (2)> then
+> play sound (song2 v) until done
 > else
-> play sound (canzone3 v) until done
+> play sound (song3 v) until done
 > end
 > end
-> +change [canzone v] by (1)
+> +change [song v] by (1)
 > end
 > ```
 
@@ -211,7 +211,7 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 > ```blocks3
 > +when green flag clicked
 > +forever
-> +set volume to (volume suono) %
+> +set volume to (music volume) %
 > end
 > ```
 
@@ -221,13 +221,13 @@ Aggiungi musica di sottofondo, un cursore per il volume e un pulsante per passar
 
 > [!TASK]
 >
-> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi uno script che impedisce al giocatore di trascinare il pulsante.
+> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi uno script che impedisce al giocatore di trascinare il pulsante.
 >
 > <img src="images/skip-thumb.png" alt="The skip sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
-> +set drag mode [non trascinabile v]
+> +set drag mode [not draggable v]
 > ```
 
 > [!TASK]
