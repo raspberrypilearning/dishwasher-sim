@@ -1,0 +1,4 @@
+name: "Het voltooide afwasspel"
+identifier: "dishwasher-sim-complete"
+type: 'scratch'
+build: false
