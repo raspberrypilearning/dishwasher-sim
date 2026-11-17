@@ -1,7 +1,7 @@
 title: Dishwasher simulator
 hero_image: images/banner.png
 description: Make a dishwashing game in this Code Club arcade project.
-listed: true
+listed: false
 pdf: false
 steps:
   - title: What you will make
