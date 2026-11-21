@@ -4,28 +4,28 @@ Una volta che la ciotola è pulita, lascia che il giocatore la trascini nel supp
 
 > [!TASK]
 >
-> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi uno script che indichi al giocatore cosa fare quando la ciotola è pulita.
+> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi uno script che indichi al giocatore cosa fare quando la ciotola è pulita.
 >
 > <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (pulito v)
-> +say [Mettilo nello scolapiatti!] for (2) seconds
+> +when I receive (clean v)
+> +say [Now put it in the rack!] for (2) seconds
 > ```
 >
 > **Verifica:** Pulisci la ciotola. Il panno dovrebbe indicare di metterlo nello scomparto.
 
 > [!TASK]
 >
-> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Avvia lo script per lavare i piatti: riproduci un suono, rimuovi il sapone dal panno e rendi la ciotola trascinabile.
+> Seleziona lo sprite `cloth` nel pannello Sprite. Avvia lo script per lavare i piatti: riproduci un suono, rimuovi il sapone dal panno e rendi la ciotola trascinabile.
 >
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (pulito v)
+> +when I receive (clean v)
 > +start sound (Coin v)
-> +set [sapone v] to [falso]
-> +set drag mode [trascinabile v]
+> +set [soap v] to [false]
+> +set drag mode [draggable v]
 > ```
 >
 > **Verifica:** Pulisci la ciotola. Ora dovresti essere in grado di trascinarlo.
@@ -37,10 +37,10 @@ Una volta che la ciotola è pulita, lascia che il giocatore la trascini nel supp
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (pulito v)
+> when I receive (clean v)
 > start sound (Coin v)
-> set [sapone v] to [falso]
-> set drag mode [trascinabile v]
+> set [soap v] to [false]
+> set drag mode [draggable v]
 > +wait until <touching (rack v)?>
 > +repeat (60)
 > +change size by (-2)
@@ -56,19 +56,19 @@ Una volta che la ciotola è pulita, lascia che il giocatore la trascini nel supp
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (pulito v)
+> when I receive (clean v)
 > start sound (Coin v)
-> set [sapone v] to [falso]
-> set drag mode [trascinabile v]
+> set [soap v] to [false]
+> set drag mode [draggable v]
 > wait until <touching (rack v)?>
 > repeat (60)
 > change size by (-2)
 > end
-> +change [piatti puliti v] by (1)
+> +change [clean plates v] by (1)
 > +hide
 > +set size to (0) %
 > +go to x: (0) y: (-140)
-> +set [pulito v] to [falso]
+> +set [clean v] to [false]
 > ```
 >
 > **Verifica:** Metti la ciotola pulita nell'apposito scolapiatti. Dovrebbe scomparire e il punteggio `piatti puliti`{:class="block3variables"} dovrebbe aumentare.
@@ -80,20 +80,20 @@ Una volta che la ciotola è pulita, lascia che il giocatore la trascini nel supp
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (pulito v)
+> when I receive (clean v)
 > start sound (Coin v)
-> set [sapone v] to [falso]
-> set drag mode [trascinabile v]
+> set [soap v] to [false]
+> set drag mode [draggable v]
 > wait until <touching (rack v)?>
 > repeat (60)
 > change size by (-2)
 > end
-> change [piatti puliti v] by (1)
+> change [clean plates v] by (1)
 > hide
 > set size to (0) %
 > go to x: (0) y: (-140)
-> set [pulito v] to [falso]
-> +broadcast (item (pick random (1) to (length of [stoviglie v])) of [stoviglie v])
+> set [clean v] to [false]
+> +broadcast (item (pick random (1) to (length of [stuff v])) of [stuff v])
 > ```
 
 > [!TASK]
