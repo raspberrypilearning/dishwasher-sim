@@ -34,7 +34,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 
 > [!TASK]
 >
-> Start een ander script op het speelveld met een `wanneer ik signaal () ontvang`{:class="block3events"} blok en kies het bericht `muziek afspelen `. Voeg een lege `herhaal`{:class="block3control"} lus toe.
+> Start een ander script op het speelveld met een `wanneer ik signaal () ontvang`{:class="block3events"} blok en kies het bericht `muziek afspelen`. Voeg een lege `herhaal`{:class="block3control"} lus toe.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
@@ -65,7 +65,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 
 > [!TASK]
 >
-> Voeg onder die controle een `als () dan anders`{:class="block3control"} blok toe. Controleer of `liedje `{:class="block3variables"} gelijk is aan `1`. Laat beide takken voorlopig leeg.
+> Voeg onder die controle een `als () dan anders`{:class="block3control"} blok toe. Controleer of `liedje`{:class="block3variables"} gelijk is aan `1`. Laat beide takken voorlopig leeg.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
@@ -102,7 +102,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 
 > [!TASK]
 >
-> Voeg binnen de eerste `anders`{:class="block3control"} tak nog een `als () dan anders`{:class="block3control"} blok toe. Controleer of `liedje `{:class="block3variables"} gelijk is aan `2`. Laat beide nieuwe takken voorlopig leeg.
+> Voeg binnen de eerste `anders`{:class="block3control"} tak nog een `als () dan anders`{:class="block3control"} blok toe. Controleer of `liedje`{:class="block3variables"} gelijk is aan `2`. Laat beide nieuwe takken voorlopig leeg.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >

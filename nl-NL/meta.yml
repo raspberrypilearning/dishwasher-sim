@@ -1,7 +1,8 @@
+---
 title: Afwassimulator
 hero_image: images/banner.png
 description: Maak een afwasspel in dit Code Club arcade-project.
-listed: true
+listed: false
 pdf: false
 steps:
   - title: Wat ga je maken
