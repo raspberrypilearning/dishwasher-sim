@@ -18,9 +18,9 @@ Aggiungere ogni piatto alla selezione casuale, quindi copiare gli script della c
 > 3. `coltello`
 > 4. `tazza`
 > 5. `piastra`
-> 6. `fondina`
+> 6. `piastra laterale`
 > 7. `cucchiaio`
-> 8. `tazza tè`
+> 8. `tazza da tè`
 >
 > ![Il pulsante più cerchiato su una lista di cose vuote.](images/add-item-to-list.png)
 >
@@ -36,15 +36,15 @@ Aggiungere ogni piatto alla selezione casuale, quindi copiare gli script della c
 > - `coltello`
 > - `tazza`
 > - `piastra`
-> - `fondina`
+> - `piastra laterale`
 > - `cucchiaio`
-> - `tazza tè`
+> - `tazza da tè`
 >
 > ![Trascina i quattro script della ciotola sugli altri sprite del piatto.](images/copy-dish-scripts.gif)
 
 > [!TASK]
 >
-> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Nello script che fa apparire il piatto sporco, cambia `quando ricevo (ciotola)`{:class="block3events"} con un messaggio che abbia lo stesso nome dello sprite. Scegli **Nuovo messaggio** per creare ogni messaggio la prima volta che ne hai bisogno.
+> Seleziona lo sprite `cloth` nel pannello Sprite. Nello script che fa apparire il piatto sporco, cambia `quando ricevo (ciotola)`{:class="block3events"} con un messaggio che abbia lo stesso nome dello sprite. Scegli **Nuovo messaggio** per creare ogni messaggio la prima volta che ne hai bisogno.
 >
 > ![Gli otto sprite del piatto.](images/dish-sprites.png)
 >

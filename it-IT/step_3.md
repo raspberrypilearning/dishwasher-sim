@@ -4,14 +4,14 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 
 > [!TASK]
 >
-> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi il codice in modo che il giocatore possa usare il sapone prima di lavare un piatto.
+> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi il codice in modo che il giocatore possa usare il sapone prima di lavare un piatto.
 >
 > <img src="images/soap-thumb.png" alt="The soap sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when this sprite clicked
 > +start sound (Bubbles v)
-> +set [sapone v] to [vero]
+> +set [soap v] to [true]
 > ```
 
 > [!TASK]
@@ -22,8 +22,8 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 >
 > ```blocks3
 > +when green flag clicked
-> +set drag mode [non trascinabile v]
-> +go to [secondo v] layer
+> +set drag mode [not draggable v]
+> +go to [back v] layer
 > ```
 
 > [!TIP]
@@ -69,7 +69,7 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 
 > [!TIP]
 >
-> Per risparmiare tempo, fai clic con il tasto destro del mouse sul blocco superiore di un gruppo e scegli **Duplica** per copiare l'intero gruppo. Prova con i blocchi `ripeti () volte` e `cambia dimensione di ()`, o con un blocco `se () allora altrimenti` che contiene già il suo operatore e variabile. Quindi modifica solo ciò che deve essere diverso.
+> Per risparmiare tempo, fai clic con il tasto destro del mouse sul blocco superiore di un gruppo e scegli **Duplica** per copiare l'intero gruppo. Prova con i blocchi `ripeti () volte` e `cambia dimensione di ()`, o con un blocco `se () allora altrimenti` che contiene già il suo operatore e la sua variabile. Quindi modifica solo ciò che deve essere diverso.
 
 > [!TASK]
 >
@@ -94,29 +94,29 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 
 > [!TASK]
 >
-> Seleziona lo sprite `strofinaccio` nel pannello Sprite. Aggiungi un altro script che inizi mostrando il panno asciutto.
+> Seleziona lo sprite `cloth` nel pannello Sprite. Aggiungi un altro script che inizi mostrando il panno asciutto.
 >
 > <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
 > +forever
-> +switch costume to (strofinaccio1 v)
+> +switch costume to (cloth1 v)
 > end
 > ```
 
 > [!TASK]
 >
-> Sostituisci il `passa al costume (strofinaccio1 v)`{:class="block3looks"} con un blocco `se () allora`{:class="block3control"}. Mantieni il panno asciutto nel ramo `altrimenti`{:class="block3control"}.
+> Sostituisci il `passa al costume (cloth1 v)`{:class="block3looks"} con un blocco `se () allora`{:class="block3control"}. Mantieni il panno asciutto nel ramo `altrimenti`{:class="block3control"}.
 >
 > <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
 > when green flag clicked
 > forever
-> +if <(pulito) = [vero]> then
+> +if <(clean) = [true]> then
 > else
-> switch costume to (strofinaccio1 v)
+> switch costume to (cloth1 v)
 > end
 > end
 > ```
@@ -130,10 +130,10 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(pulito) = [vero]> then
-> +switch costume to (mano v)
+> if <(clean) = [true]> then
+> +switch costume to (hand v)
 > else
-> switch costume to (strofinaccio1 v)
+> switch costume to (cloth1 v)
 > end
 > end
 > ```
@@ -147,12 +147,12 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(pulito) = [vero]> then
-> switch costume to (mano v)
+> if <(clean) = [true]> then
+> switch costume to (hand v)
 > else
-> +if <(sapone) = [vero]> then
+> +if <(soap) = [true]> then
 > else
-> switch costume to (strofinaccio1 v)
+> switch costume to (cloth1 v)
 > end
 > end
 > end
@@ -167,13 +167,13 @@ Rendi il sapone cliccabile e fai in modo che il panno cambi per mostrare lo stat
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(pulito) = [vero]> then
-> switch costume to (mano v)
+> if <(clean) = [true]> then
+> switch costume to (hand v)
 > else
-> if <(sapone) = [vero]> then
-> +switch costume to (strofinaccio2 v)
+> if <(soap) = [true]> then
+> +switch costume to (cloth2 v)
 > else
-> switch costume to (strofinaccio1 v)
+> switch costume to (cloth1 v)
 > end
 > end
 > end
