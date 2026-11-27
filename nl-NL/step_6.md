@@ -9,8 +9,8 @@ Zodra de kom schoon is, laat de speler deze op het rek zetten en een schoon bord
 > <img src="images/cloth-thumb.png" alt="The cloth sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (clean v)
-> +say [Now put it in the rack!] for (2) seconds
+> +when I receive (schoon v)
+> +say [Zet het nu in het afdruiprek!] for (2) seconds
 > ```
 >
 > **Controleer:** Maak de kom schoon. Het vaatdoekje zou je moeten vertellen om hem op het afdruiprek te zetten.
@@ -22,10 +22,10 @@ Zodra de kom schoon is, laat de speler deze op het rek zetten en een schoon bord
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (clean v)
+> +when I receive (schoon v)
 > +start sound (Coin v)
-> +set [soap v] to [false]
-> +set drag mode [draggable v]
+> +set [zeep v] to [niet waar]
+> +set drag mode [sleepbaar v]
 > ```
 >
 > **Controleer:** Was de kom nog een keer af. Je zou hem nu moeten kunnen slepen.
@@ -37,10 +37,10 @@ Zodra de kom schoon is, laat de speler deze op het rek zetten en een schoon bord
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (clean v)
+> when I receive (schoon v)
 > start sound (Coin v)
-> set [soap v] to [false]
-> set drag mode [draggable v]
+> set [zeep v] to [niet waar]
+> set drag mode [sleepbaar v]
 > +wait until <touching (rack v)?>
 > +repeat (60)
 > +change size by (-2)
@@ -58,17 +58,17 @@ Zodra de kom schoon is, laat de speler deze op het rek zetten en een schoon bord
 > ```blocks3
 > when I receive (clean v)
 > start sound (Coin v)
-> set [soap v] to [false]
-> set drag mode [draggable v]
+> set [schoon v] to [niet waar]
+> set drag mode [sleepbaar v]
 > wait until <touching (rack v)?>
 > repeat (60)
 > change size by (-2)
 > end
-> +change [clean plates v] by (1)
+> +change [schone borden v] by (1)
 > +hide
 > +set size to (0) %
 > +go to x: (0) y: (-140)
-> +set [clean v] to [false]
+> +set [schoon v] to [niet waar]
 > ```
 >
 > **Controleer:** Plaats de schone kom in het afdruiprek. Hij zou moeten verdwijnen en de score voor `schone borden` zou moeten stijgen.
@@ -80,20 +80,20 @@ Zodra de kom schoon is, laat de speler deze op het rek zetten en een schoon bord
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (clean v)
+> when I receive (schoon v)
 > start sound (Coin v)
-> set [soap v] to [false]
-> set drag mode [draggable v]
+> set [zeep v] to [niet waar]
+> set drag mode [sleepbaar v]
 > wait until <touching (rack v)?>
 > repeat (60)
 > change size by (-2)
 > end
-> change [clean plates v] by (1)
+> change [schone borden v] by (1)
 > hide
 > set size to (0) %
 > go to x: (0) y: (-140)
-> set [clean v] to [false]
-> +broadcast (item (pick random (1) to (length of [stuff v])) of [stuff v])
+> set [schoon v] to [niet waar]
+> +broadcast (item (pick random (1) to (length of [spullen v])) of [spullen v])
 > ```
 
 > [!TASK]

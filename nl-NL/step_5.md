@@ -16,7 +16,7 @@ Laat de speler zeep toevoegen en vervolgens door de vuile uiterlijken heen de ko
 >
 > ```blocks3
 > +when this sprite clicked
-> +if <(clean) = [false]> then
+> +if <(schoon) = [niet waar]> then
 > end
 > ```
 
@@ -28,8 +28,8 @@ Laat de speler zeep toevoegen en vervolgens door de vuile uiterlijken heen de ko
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> +if <(soap) = [true]> then
+> if <(schoon) = [niet waar]> then
+> +if <(zeep) = [waar]> then
 > else
 > end
 > end
@@ -43,8 +43,8 @@ Laat de speler zeep toevoegen en vervolgens door de vuile uiterlijken heen de ko
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
+> if <(schoon) = [niet waar]> then
+> if <(zeep) = [waar]> then
 > +repeat until <(costume [number v]) = (6)>
 > end
 > else
@@ -60,8 +60,8 @@ Laat de speler zeep toevoegen en vervolgens door de vuile uiterlijken heen de ko
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
+> if <(schoon) = [niet waar]> then
+> if <(zeep) = [waar]> then
 > repeat until <(costume [number v]) = (6)>
 > +wait until <mouse down?>
 > end
@@ -78,8 +78,8 @@ Laat de speler zeep toevoegen en vervolgens door de vuile uiterlijken heen de ko
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
+> if <(schoon) = [false]> then
+> if <(zeep) = [true]> then
 > repeat until <(costume [number v]) = (6)>
 > wait until <mouse down?>
 > +start sound (pick random (1) to (4))
@@ -99,15 +99,15 @@ Laat de speler zeep toevoegen en vervolgens door de vuile uiterlijken heen de ko
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
+> if <(schoon) = [niet waar]> then
+> if <(zeep) = [waar]> then
 > repeat until <(costume [number v]) = (6)>
 > wait until <mouse down?>
 > start sound (pick random (1) to (4))
 > next costume
 > wait (0.2) seconds
 > end
-> +set [clean v] to [true]
+> +set [schoon v] to [waar]
 > else
 > end
 > end
@@ -121,17 +121,17 @@ Laat de speler zeep toevoegen en vervolgens door de vuile uiterlijken heen de ko
 >
 > ```blocks3
 > when this sprite clicked
-> if <(clean) = [false]> then
-> if <(soap) = [true]> then
+> if <(schoon) = [niet waar]> then
+> if <(zeep) = [waar]> then
 > repeat until <(costume [number v]) = (6)>
 > wait until <mouse down?>
 > start sound (pick random (1) to (4))
 > next costume
 > wait (0.2) seconds
 > end
-> set [clean v] to [true]
+> set [schoon v] to [waar]
 > else
-> +say [You need soap!] for (2) seconds
+> +say [Je hebt zeep nodig!] for (2) seconds
 > +start sound (Collect v)
 > end
 > end

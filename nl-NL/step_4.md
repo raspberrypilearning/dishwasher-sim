@@ -26,13 +26,13 @@ In het startproject heet deze sprite `kom` en zijn uiterlijken `1` tot `6`. Het 
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (bowl v)
+> +when I receive (kom v)
 > +switch costume to (1)
-> +set [clean v] to [false]
+> +set [schoon v] to [niet waar]
 > +set size to (0) %
 > +go to x: (0) y: (-120)
 > +show
-> +set drag mode [not draggable v]
+> +set drag mode [niet sleepbaar v]
 > ```
 
 > [!TASK]
@@ -42,13 +42,13 @@ In het startproject heet deze sprite `kom` en zijn uiterlijken `1` tot `6`. Het 
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (bowl v)
+> when I receive (kom v)
 > switch costume to (1)
-> set [clean v] to [false]
+> set [schoon v] to [niet waar]
 > set size to (0) %
 > go to x: (0) y: (-120)
 > show
-> set drag mode [not draggable v]
+> set drag mode [niet sleepbaar v]
 > +repeat (20)
 > +change y by (6)
 > +change size by (6)
@@ -62,19 +62,19 @@ In het startproject heet deze sprite `kom` en zijn uiterlijken `1` tot `6`. Het 
 > <img src="images/bowl-thumb.png" alt="The bowl sprite thumbnail." width="138" height="105" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (bowl v)
+> when I receive (kom v)
 > switch costume to (1)
-> set [clean v] to [false]
+> set [schoon v] to [niet waar]
 > set size to (0) %
 > go to x: (0) y: (-120)
 > show
-> set drag mode [not draggable v]
+> set drag mode [niet sleepbaar v]
 > repeat (20)
 > change y by (6)
 > change size by (6)
 > end
-> +wait until <(clean) = [true]>
-> +broadcast (clean v)
+> +wait until <(schoon) = [waar]>
+> +broadcast (schoon v)
 > ```
 
 > [!TASK]

@@ -40,10 +40,10 @@ Stel de spelstatus in, plaats het rek en zorg ervoor dat het vaatdoekje de muisa
 >
 > ```blocks3
 > +when green flag clicked
-> +set [clean plates v] to (0)
-> +set [clean v] to [false]
-> +set [soap v] to [false]
-> +broadcast (bowl v)
+> +set [schone borden v] to (0)
+> +set [schoon v] to [niet waar]
+> +set [zeep v] to [niet waar]
+> +broadcast (kom v)
 > ```
 
 > [!TIP]
@@ -60,10 +60,10 @@ Stel de spelstatus in, plaats het rek en zorg ervoor dat het vaatdoekje de muisa
 >
 > ```blocks3
 > when green flag clicked
-> set [clean plates v] to (0)
-> set [clean v] to [false]
-> set [soap v] to [false]
-> +broadcast (item (pick random (1) to (length of [stuff v])) of [stuff v])
+> set [schone borden v] to (0)
+> set [schoon v] to [niet waar]
+> set [zeep v] to [niet waar]
+> +broadcast (item (pick random (1) to (length of [spullen v])) of [spullen v])
 > ```
 
 > [!TASK]
@@ -92,8 +92,8 @@ Stel de spelstatus in, plaats het rek en zorg ervoor dat het vaatdoekje de muisa
 > ```blocks3
 > +when green flag clicked
 > +forever
-> +go to (mouse-pointer v)
-> +go to [front v] layer
+> +go to (muisaanwijzer v)
+> +go to [voorgrond v] layer
 > end
 > ```
 

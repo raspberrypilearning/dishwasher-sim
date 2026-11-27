@@ -11,7 +11,7 @@ Maak de zeep klikbaar en laat het vaatdoekje veranderen om de spelstatus weer te
 > ```blocks3
 > +when this sprite clicked
 > +start sound (Bubbles v)
-> +set [soap v] to [true]
+> +set [zeep v] to [waar]
 > ```
 
 > [!TASK]
@@ -22,8 +22,8 @@ Maak de zeep klikbaar en laat het vaatdoekje veranderen om de spelstatus weer te
 >
 > ```blocks3
 > +when green flag clicked
-> +set drag mode [not draggable v]
-> +go to [back v] layer
+> +set drag mode [niet sleepbaar v]
+> +go to [achtergrond v] layer
 > ```
 
 > [!TIP]
@@ -114,7 +114,7 @@ Maak de zeep klikbaar en laat het vaatdoekje veranderen om de spelstatus weer te
 > ```blocks3
 > when green flag clicked
 > forever
-> +if <(clean) = [true]> then
+> +if <(schoon) = [waar]> then
 > else
 > switch costume to (cloth1 v)
 > end
@@ -130,7 +130,7 @@ Maak de zeep klikbaar en laat het vaatdoekje veranderen om de spelstatus weer te
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(clean) = [true]> then
+> if <(schoon) = [waar]> then
 > +switch costume to (hand v)
 > else
 > switch costume to (cloth1 v)
@@ -147,10 +147,10 @@ Maak de zeep klikbaar en laat het vaatdoekje veranderen om de spelstatus weer te
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(clean) = [true]> then
+> if <(schoon) = [true]> then
 > switch costume to (hand v)
 > else
-> +if <(soap) = [true]> then
+> +if <(zeep) = [waar]> then
 > else
 > switch costume to (cloth1 v)
 > end
@@ -167,10 +167,10 @@ Maak de zeep klikbaar en laat het vaatdoekje veranderen om de spelstatus weer te
 > ```blocks3
 > when green flag clicked
 > forever
-> if <(clean) = [true]> then
+> if <(schoon) = [waar]> then
 > switch costume to (hand v)
 > else
-> if <(soap) = [true]> then
+> if <(zeep) = [waar]> then
 > +switch costume to (cloth2 v)
 > else
 > switch costume to (cloth1 v)

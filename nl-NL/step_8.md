@@ -23,13 +23,13 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 >
 > ```blocks3
 > when green flag clicked
-> set [clean plates v] to (0)
-> set [clean v] to [false]
-> set [soap v] to [false]
+> set [schone borden v] to (0)
+> set [schoon v] to [niet waar]
+> set [zeep v] to [niet waar]
 > +set [song v] to (pick random (1) to (3))
 > +set [music volume v] to (25)
-> +broadcast (play music v)
-> broadcast (item (pick random (1) to (length of [stuff v])) of [stuff v])
+> +broadcast (muziek afspelen v)
+> broadcast (item (pick random (1) to (length of [spullen v])) of [spullen v])
 > ```
 
 > [!TASK]
@@ -39,7 +39,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> +when I receive (play music v)
+> +when I receive (muziek afspelen v)
 > +forever
 > end
 > ```
@@ -51,7 +51,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (play music v)
+> when I receive (muziek afspelen v)
 > forever
 > +if <(song) > (3)> then
 > +set [song v] to (1)
@@ -70,7 +70,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (play music v)
+> when I receive (muziek afspelen v)
 > forever
 > if <(song) > (3)> then
 > set [song v] to (1)
@@ -88,7 +88,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (play music v)
+> when I receive (muziek afspelen v)
 > forever
 > if <(song) > (3)> then
 > set [song v] to (1)
@@ -107,7 +107,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (play music v)
+> when I receive (muziek afspelen v)
 > forever
 > if <(song) > (3)> then
 > set [song v] to (1)
@@ -129,7 +129,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (play music v)
+> when I receive (muziek afspelen v)
 > forever
 > if <(song) > (3)> then
 > set [song v] to (1)
@@ -152,7 +152,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (play music v)
+> when I receive (muziek afspelen v)
 > forever
 > if <(song) > (3)> then
 > set [song v] to (1)
@@ -176,7 +176,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
-> when I receive (play music v)
+> when I receive (muziek afspelen v)
 > forever
 > if <(song) > (3)> then
 > set [song v] to (1)
@@ -211,7 +211,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 > ```blocks3
 > +when green flag clicked
 > +forever
-> +set volume to (music volume) %
+> +set volume to (muziek volume) %
 > end
 > ```
 
@@ -227,7 +227,7 @@ Voeg achtergrondmuziek, een volumeregelaar en een knop toe om naar het volgende 
 >
 > ```blocks3
 > +when green flag clicked
-> +set drag mode [not draggable v]
+> +set drag mode [niet sleepbaar v]
 > ```
 
 > [!TASK]
