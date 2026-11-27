@@ -1,0 +1,22 @@
+title: Simulateur de lave-vaisselle
+hero_image: images/banner.png
+description: Crée un jeu de lave-vaisselle dans ce projet d'arcade Code Club.
+listed: true
+pdf: false
+steps:
+  - title: Ce que tu vas faire
+  - title: Lancer le lave-vaisselle
+    completion:
+      - engaged
+  - title: Ajouter un savon et une serviette
+  - title: Faire apparaître un élément de vaisselle
+  - title: Frotte la vaisselle
+  - title: La mettre dans le rack
+  - title: Ajoutez les autres éléments de vaisselle
+  - title: Ajouter des commandes pour contrôler la musique
+    completion:
+      - internal
+  - title: Défi
+    challenge: true
+    completion:
+      - external
