@@ -4,7 +4,7 @@ Imposta lo stato del gioco, posiziona il supporto e fai in modo che il tessuto s
 
 > [!TASK]
 >
-> Il progetto [Avviatore simulatore di lavastoviglie](https://scratch.mit.edu/projects/1440248677/editor){:target="_blank"}. Ha già gli sprite, costumi e suoni di cui hai bisogno.
+> Il progetto [Avviatore simulatore di lavastoviglie](https://scratch.mit.edu/projects/1362382639/editor){:target="_blank"}. Ha già gli sprite, costumi e suoni di cui hai bisogno.
 
 > [!TASK]
 >
@@ -22,7 +22,7 @@ Imposta lo stato del gioco, posiziona il supporto e fai in modo che il tessuto s
 >
 > Mantieni lo Stage selezionato. Scegli **Crea una lista** dal menu `Variabili`{:class="block3variables"} e crea una lista chiamata `stoviglie`{:class="block3variables"} **per tutti gli sprite**.
 >
-> Aggiungi `ciotola` come primo elemento dell'elenco. Aggiungerai gli altri piatti più tardi.
+> Aggiungi `bowl` come primo elemento dell'elenco. Aggiungerai gli altri piatti più tardi.
 >
 > ![Il pulsante più cerchiato su una lista di cose vuote.](images/add-item-to-list.png)
 >
@@ -34,16 +34,16 @@ Imposta lo stato del gioco, posiziona il supporto e fai in modo che il tessuto s
 >
 > Aggiungi lo script seguente allo Stage per riavviare il gioco. In questo progetto, le variabili `puliti`{:class="block3variables"} e `sapone`{:class="block3variables"} memorizzano solo `vero` o `falso`, quindi inizializzano entrambe con il valore booleano `falso`.
 >
-> Dal menu nel blocco `invia a tutti ()`{:class="block3events"}, scegli **Nuovo messaggio**. Assegna al nuovo broadcast il nome `ciotola`.
+> Dal menu nel blocco `invia a tutti ()`{:class="block3events"}, scegli **Nuovo messaggio**. Assegna al nuovo broadcast il nome `bowl`.
 >
 > <img src="images/stage.png" alt="The Stage in the Sprite pane." width="82" height="108" style="object-fit: contain;">
 >
 > ```blocks3
 > +when green flag clicked
-> +set [piatti puliti v] to (0)
-> +set [puliti v] to [falso]
-> +set [sapone v] to [falso]
-> +broadcast (ciotola v)
+> +set [clean plates v] to (0)
+> +set [clean v] to [false]
+> +set [soap v] to [false]
+> +broadcast (bowl v)
 > ```
 
 > [!TIP]
@@ -60,10 +60,10 @@ Imposta lo stato del gioco, posiziona il supporto e fai in modo che il tessuto s
 >
 > ```blocks3
 > when green flag clicked
-> set [piatti puliti v] to (0)
-> set [puliti v] to [falso]
-> set [sapone v] to [falso]
-> +broadcast (item (pick random (1) to (length of [stoviglie v])) of [stoviglie v])
+> set [clean plates v] to (0)
+> set [clean v] to [false]
+> set [soap v] to [false]
+> +broadcast (item (pick random (1) to (length of [stuff v])) of [stuff v])
 > ```
 
 > [!TASK]
@@ -92,8 +92,8 @@ Imposta lo stato del gioco, posiziona il supporto e fai in modo che il tessuto s
 > ```blocks3
 > +when green flag clicked
 > +forever
-> +go to (puntatore del mouse v)
-> +go to [primo v] layer
+> +go to (mouse-pointer v)
+> +go to [front v] layer
 > end
 > ```
 
